@@ -519,9 +519,12 @@ const BODY = `<!-- NAV -->
           Soyez #1 quand<br>vos clients cherchent<br>
           <span class="near">"près de moi"</span>
         </h1>
-        <p class="hero-sub">
-          Esmy augmente automatiquement vos avis Google grâce à la gamification, répond à chaque avis avec l'IA, et vous fait remonter dans le référencement Google — augmentant ainsi votre chiffre d'affaires, en moins d'une semaine.
-        </p>
+        <div class="hero-sub">
+          <p style="font-size:18px;font-weight:700;color:white;margin-bottom:12px;line-height:1.3;">Esmy fait exploser vos avis Google en moins d'une semaine.</p>
+          <p style="margin-bottom:12px;">Grâce à une gamification qui incite naturellement vos clients à laisser des avis, et une IA puissante qui répond automatiquement à chaque commentaire.</p>
+          <p style="margin-bottom:12px;color:rgba(255,255,255,.75);">Plus d'avis → meilleure note → meilleure position dans Google Maps → plus de clients et plus de chiffre.</p>
+          <p style="font-style:italic;color:rgba(255,255,255,.6);">Votre réputation Google boostée, votre chiffre d'affaires en hausse… sans que vous ayez à y passer du temps.</p>
+        </div>
         <div class="hero-actions">
           <a href="#tarifs" class="btn-cta">
             Démarrer gratuitement
@@ -641,13 +644,12 @@ const BODY = `<!-- NAV -->
       <div>
         <div class="near-label">Visibilité locale · Google Près De Moi</div>
         <h2 class="near-title">
-          "Restaurant près de moi"<br>
-          — votre client cherche.<br>
-          Êtes-vous visible ?
+          "Restaurant près de moi"<br>— votre client cherche.<br>
+          <span style="color:var(--orange);">Êtes-vous visible ?</span>
         </h2>
-        <p class="near-desc">
-          Google classe les commerces locaux selon 3 critères : pertinence, distance, et <strong style="color:white;">notoriété</strong>. Plus vous avez d'avis récents et bien notés, plus vous apparaissez haut dans le "Local Pack" — les 3 fiches qui captent 70% des clics.
-        </p>
+        <p class="near-desc">Google place en tête les commerces qui ont le plus d'avis récents et bien notés. Ces trois premières positions (Local Pack) captent <strong style="color:white;">70 % des clics</strong>.</p>
+        <p class="near-desc">Avec Esmy, vous multipliez vos avis grâce à la gamification et à l'IA, vous améliorez votre notoriété, et vous remontez rapidement dans les recherches "près de moi".</p>
+        <p style="font-size:16px;font-weight:700;color:white;margin-bottom:24px;">Plus visible. Plus de clients. Plus de ventes.</p>
         <div class="near-facts">
           <div class="near-fact">
             <div class="ico">📍</div>
@@ -721,7 +723,7 @@ const BODY = `<!-- NAV -->
     <div class="text-center fade-in">
       <div class="section-badge">⚡ Simple & efficace</div>
       <h2 class="section-title">3 étapes. Premiers avis en moins de 24h.</h2>
-      <p class="section-sub">Pas de formation, pas de technique. Esmy s'intègre naturellement dans la visite de votre client.</p>
+      <p class="section-sub" style="max-width:620px;">Essayez Esmy <strong>14 jours gratuitement</strong>. Aucune carte bancaire demandée. Seulement votre email et le nom de votre commerce.<br><br>Nous vous accompagnons du premier jour jusqu'à la fin de votre période d'essai pour maximiser vos résultats. <span style="font-weight:700;color:var(--slate);">Zéro risque. Que des résultats.</span></p>
     </div>
     <div class="steps">
       <div class="step-card fade-in">
@@ -754,7 +756,9 @@ const BODY = `<!-- NAV -->
       <div class="feature-text">
         <div class="feature-label">Gamification</div>
         <h3 class="feature-title">La roue qui transforme chaque visite en avis</h3>
-        <p class="feature-desc">Vos clients ne laissent pas d'avis parce qu'ils n'ont pas de raison suffisante. Esmy crée cette raison avec une mécanique ludique — et une récompense immédiate. Résultat : +300% d'avis chez certains commerçants.</p>
+        <p class="feature-desc">Vos clients ne laissent pas d'avis parce qu'ils n'ont pas de raison suffisante. Esmy crée cette raison avec une mécanique ludique et une récompense immédiate.</p>
+        <p class="feature-desc"><strong>Résultat : jusqu'à +300 % d'avis</strong> chez certains commerçants.</p>
+        <p class="feature-desc" style="font-size:14px;background:rgba(249,115,22,.06);border-left:3px solid var(--orange);padding:10px 14px;border-radius:0 8px 8px 0;margin-bottom:24px;">Plus d'avis = meilleure note = plus de visibilité dans "Restaurant près de moi" et toutes les recherches locales.</p>
         <ul class="feature-list">
           <li>Lots entièrement personnalisables (café, réduction, cadeau…)</li>
           <li>Probabilités configurables par lot, roue temps réel</li>
