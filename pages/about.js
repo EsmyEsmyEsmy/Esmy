@@ -42,6 +42,8 @@ h2{font-size:clamp(26px,3.5vw,38px);font-weight:800;letter-spacing:-1px;margin-b
 .stat-box{text-align:center;padding:28px;background:white;border:1px solid var(--g200);border-radius:14px}
 .stat-num{font-size:36px;font-weight:800;color:var(--slate);letter-spacing:-1px}
 .stat-num .o{color:var(--orange)}
+.stat-num-clean{font-size:30px;font-weight:800;color:var(--slate);letter-spacing:-1px;margin:6px 0}
+.stat-icon{font-size:28px;margin-bottom:4px}
 .stat-lbl{font-size:13px;color:var(--sub);margin-top:4px}
 
 .api-section{background:var(--slate);padding:64px 0}
@@ -75,7 +77,7 @@ const BODY = `<nav>
 <div class="page-hero">
   <div class="container">
     <div class="eyebrow">À propos d'Esmy</div>
-    <h1>Bâtis en Provence,<br>pour les commerçants de France</h1>
+    <h1>Bâtis en Provence,<br>pour les commerçants.</h1>
     <p>Esmy est né d'une conviction simple : un bon commerçant mérite d'être trouvé. Nous construisons les outils qui rendent ça possible.</p>
   </div>
 </div>
@@ -85,9 +87,8 @@ const BODY = `<nav>
     <div class="about-grid">
       <div>
         <h2>Pourquoi Esmy existe</h2>
-        <p class="sub">En 2023, en travaillant avec des restaurateurs et commerçants de la région de Luberon, nous avons observé quelque chose d'évident : les meilleurs commerces n'étaient pas forcément les mieux notés sur Google. Le problème ? Personne ne leur avait jamais dit comment collecter des avis efficacement.</p>
+        <p class="sub">En 2023, en travaillant avec des restaurateurs et commerçants, nous avons observé quelque chose d'évident. On partage tous notre avis quand c'est négatif — rarement autrement. Esmy change ça.</p>
         <p class="sub">On a construit Esmy pour changer ça. Pas avec des tactiques douteuses, mais avec une mécanique honnête : donner aux clients une raison ludique de partager leur expérience, et automatiser tout le reste avec l'IA.</p>
-        <p class="sub">Aujourd'hui, Esmy aide plus de 340 commerces locaux à améliorer leur visibilité sur Google — sans y passer leurs week-ends.</p>
       </div>
       <div style="background:white;border:1px solid var(--g200);border-radius:20px;padding:32px;box-shadow:0 8px 32px rgba(17,24,39,.08)">
         <div style="font-size:13px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px">Notre mission</div>
@@ -104,20 +105,24 @@ const BODY = `<nav>
 
     <div class="stat-row">
       <div class="stat-box">
-        <div class="stat-num">340<span class="o">+</span></div>
-        <div class="stat-lbl">commerces actifs sur Esmy</div>
+        <div class="stat-icon">🎡</div>
+        <div class="stat-num-clean">+300%</div>
+        <div class="stat-lbl">d'avis collectés chez certains commerçants</div>
       </div>
       <div class="stat-box">
-        <div class="stat-num">×<span class="o">8</span></div>
-        <div class="stat-lbl">plus d'avis vs méthode classique</div>
+        <div class="stat-icon">🤖</div>
+        <div class="stat-num-clean">94%</div>
+        <div class="stat-lbl">des avis reçoivent une réponse IA</div>
       </div>
       <div class="stat-box">
-        <div class="stat-num">94<span class="o">%</span></div>
-        <div class="stat-lbl">taux de réponse aux avis</div>
+        <div class="stat-icon">⭐</div>
+        <div class="stat-num-clean">4.7★</div>
+        <div class="stat-lbl">note Google moyenne après Esmy</div>
       </div>
       <div class="stat-box">
-        <div class="stat-num">4.7<span class="o">★</span></div>
-        <div class="stat-lbl">note Google moyenne de nos clients</div>
+        <div class="stat-icon">⚡</div>
+        <div class="stat-num-clean">3 min</div>
+        <div class="stat-lbl">pour configurer et déployer votre QR code</div>
       </div>
     </div>
   </div>
@@ -149,21 +154,7 @@ const BODY = `<nav>
   </div>
 </section>
 
-<div class="api-section">
-  <div class="container">
-    <div class="api-inner">
-      <h2>Partenaire API officiel Google</h2>
-      <p>Esmy accède à votre fiche Google Business via l'API officielle Google Business Profile — approuvée par Google, sécurisée par OAuth 2.0. Jamais d'automatisation non autorisée.</p>
-      <div class="api-badges">
-        <span class="api-badge green">✓ Google Business Profile API</span>
-        <span class="api-badge green">✓ Accès approuvé par Google</span>
-        <span class="api-badge">OAuth 2.0</span>
-        <span class="api-badge">RGPD compliant</span>
-        <span class="api-badge">Données chiffrées AES-256</span>
-        <span class="api-badge">SASU française</span>
-      </div>
-    </div>
-  </div>
+
 </div>
 
 <footer>
