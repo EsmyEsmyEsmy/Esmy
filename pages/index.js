@@ -112,13 +112,13 @@ nav {
 /* Near Me pill — hero accent */
 .near-me-pill {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(22,163,74,.15); border: 1px solid rgba(22,163,74,.3);
+  background: rgba(249,115,22,.12); border: 1px solid rgba(249,115,22,.3);
   border-radius: 100px; padding: 5px 14px 5px 8px;
-  font-size: 13px; color: #4ADE80; font-weight: 600; margin-bottom: 22px;
+  font-size: 13px; color: var(--orange); font-weight: 600; margin-bottom: 22px;
 }
 .near-me-pill .g-dot {
-  width: 22px; height: 22px; background: #4ADE80; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 900; color: #111827;
+  width: 22px; height: 22px; background: var(--orange); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 900; color: white;
 }
 
 .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
@@ -217,11 +217,11 @@ nav {
 /* ── STATS BAR ── */
 .stats-bar { background: white; border-top: 1px solid var(--g200); border-bottom: 1px solid var(--g200); }
 .stats-inner { display: grid; grid-template-columns: repeat(4,1fr); }
-.stat-item { padding: 28px 24px; text-align: center; border-right: 1px solid var(--g200); }
+.stat-item { padding: 32px 24px; text-align: center; border-right: 1px solid var(--g200); position: relative; }
 .stat-item:last-child { border-right: none; }
-.stat-num { font-size: 34px; font-weight: 800; color: var(--slate); letter-spacing: -1px; }
-.stat-num .accent { color: var(--orange); }
-.stat-label { font-size: 13.5px; color: var(--textsub); margin-top: 3px; }
+.stat-num { font-size: 38px; font-weight: 800; color: var(--slate); letter-spacing: -2px; line-height: 1; }
+.stat-num .accent { color: var(--slate); }
+.stat-label { font-size: 13px; color: var(--textsub); margin-top: 8px; line-height: 1.4; max-width: 140px; margin-left: auto; margin-right: auto; }
 
 /* ── NEAR ME SECTION — special ── */
 .near-section {
@@ -509,7 +509,7 @@ const BODY = `<!-- NAV -->
       <div class="hero-left">
         <div class="near-me-pill">
           <div class="g-dot">G</div>
-          Recherches "near me" · +46% en 2024
+          Recherches "near me" · +58% en 2025
         </div>
         <h1 class="hero-h1">
           Soyez #1 quand<br>vos clients cherchent<br>
@@ -533,8 +533,8 @@ const BODY = `<!-- NAV -->
             <div class="av av-d">L</div>
           </div>
           <div class="hero-social-txt">
-            <strong>+340 commerçants</strong> ont amélioré leur<br>
-            classement Google en moins de 30 jours
+            <strong>33 clients</strong> sont déjà inscrits<br>
+            pour la sortie officielle d'Esmy
           </div>
         </div>
       </div>
@@ -546,8 +546,8 @@ const BODY = `<!-- NAV -->
               <div class="hc-brand">
                 <div class="hc-logo">🍕</div>
                 <div>
-                  <div class="hc-name">La Bella Pizza</div>
-                  <div class="hc-loc">📍 Paris 11e</div>
+                  <div class="hc-name">La Pizza du Soleil</div>
+                  <div class="hc-loc">📍 Nice Centre</div>
                 </div>
               </div>
               <div class="hc-tag">+28 avis ce mois</div>
@@ -557,17 +557,17 @@ const BODY = `<!-- NAV -->
               <div class="nb-icon">🔍</div>
               <div class="nb-text">
                 Votre fiche apparaît maintenant dans les recherches<br>
-                <strong>"pizza near me"</strong> — Position #1 dans votre zone
+                <strong>"pizza near me · Nice"</strong> — Position #1 dans votre zone
               </div>
             </div>
 
             <div class="g-listing">
               <div class="gl-top">
-                <div class="gl-name">La Bella Pizza</div>
+                <div class="gl-name">La Pizza du Soleil</div>
                 <div class="gl-pos">#1 Local Pack</div>
               </div>
               <div><span class="gl-stars">★★★★★</span><span class="gl-count">4.9 (312 avis)</span></div>
-              <div class="gl-tag">🍕 Restaurant · Ouvert · Pizza · Livraison</div>
+              <div class="gl-tag">🍕 Restaurant · Ouvert · Pizza · Nice</div>
             </div>
 
             <div class="reviews-mini">
@@ -611,19 +611,19 @@ const BODY = `<!-- NAV -->
   <div class="container">
     <div class="stats-inner">
       <div class="stat-item">
-        <div class="stat-num">×<span class="accent">8</span></div>
-        <div class="stat-label">plus d'avis collectés vs méthode classique</div>
+        <div class="stat-num">+300%</div>
+        <div class="stat-label">d'avis collectés chez certains commerçants</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">48<span class="accent">h</span></div>
-        <div class="stat-label">pour remonter dans le pack local Google</div>
+        <div class="stat-num">&lt;24h</div>
+        <div class="stat-label">pour recevoir les premiers avis clients</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">94<span class="accent">%</span></div>
-        <div class="stat-label">des avis reçoivent une réponse IA automatique</div>
+        <div class="stat-num">94%</div>
+        <div class="stat-label">des avis reçoivent une réponse IA</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">3<span class="accent">min</span></div>
+        <div class="stat-num">3 min</div>
         <div class="stat-label">pour configurer et déployer votre QR code</div>
       </div>
     </div>
@@ -647,7 +647,7 @@ const BODY = `<!-- NAV -->
         <div class="near-facts">
           <div class="near-fact">
             <div class="ico">📍</div>
-            <span>46% des recherches Google incluent "near me" ou "près de moi" en 2024</span>
+            <span>58% des recherches Google incluent "near me" ou "près de moi" en 2025</span>
           </div>
           <div class="near-fact">
             <div class="ico">⭐</div>
@@ -668,14 +668,14 @@ const BODY = `<!-- NAV -->
         <div class="local-pack">
           <div class="lp-header">
             <svg width="18" height="18" viewBox="0 0 18 18"><path d="M9 1.5L10.5 6.5H15.5L11.5 9.5 13 14.5 9 11.5 5 14.5 6.5 9.5 2.5 6.5H7.5Z" fill="#F97316"/></svg>
-            <div class="lp-search">pizza near me · Paris</div>
+            <div class="lp-search">pizza near me · Nice · Nice</div>
           </div>
           <div class="lp-map">🗺️ Carte — 3 résultats à proximité</div>
           <div class="lp-results">
             <div class="lp-row">
               <div class="lp-rank r1">1</div>
               <div class="lp-biz">
-                <div class="lp-biz-name">La Bella Pizza</div>
+                <div class="lp-biz-name">La Pizza du Soleil</div>
                 <div class="lp-stars-row">
                   <span class="lp-stars">★★★★★</span>
                   <span class="lp-reviews">4.9 (312)</span>
@@ -716,7 +716,7 @@ const BODY = `<!-- NAV -->
   <div class="container">
     <div class="text-center fade-in">
       <div class="section-badge">⚡ Simple & efficace</div>
-      <h2 class="section-title">3 étapes. Premiers avis en 24h.</h2>
+      <h2 class="section-title">3 étapes. Premiers avis en moins de 24h.</h2>
       <p class="section-sub">Pas de formation, pas de technique. Esmy s'intègre naturellement dans la visite de votre client.</p>
     </div>
     <div class="steps">
@@ -729,13 +729,13 @@ const BODY = `<!-- NAV -->
       <div class="step-card fade-in">
         <div class="step-num">2</div>
         <div class="step-icon">🎡</div>
-        <div class="step-title">Il joue — et laisse son avis</div>
+        <div class="step-title">Il laisse son avis — et joue</div>
         <div class="step-desc">La roue de la chance se déverrouille après l'avis Google. La récompense est garantie quelle que soit la note donnée.</div>
       </div>
       <div class="step-card fade-in">
         <div class="step-num">3</div>
         <div class="step-icon">🤖</div>
-        <div class="step-title">L'IA répond à sa place</div>
+        <div class="step-title">L'IA répond automatiquement aux commentaires aidant à référencer votre commerce</div>
         <div class="step-desc">Chaque avis reçoit une réponse personnalisée générée par IA — dans votre ton, vérifiée par vous, publiée sur Google en un clic.</div>
       </div>
     </div>
@@ -750,7 +750,7 @@ const BODY = `<!-- NAV -->
       <div class="feature-text">
         <div class="feature-label">Gamification</div>
         <h3 class="feature-title">La roue qui transforme chaque visite en avis</h3>
-        <p class="feature-desc">Vos clients ne laissent pas d'avis parce qu'ils n'ont pas de raison suffisante. Esmy crée cette raison avec une mécanique ludique — et une récompense immédiate. Résultat : ×8 plus d'avis que par email ou SMS.</p>
+        <p class="feature-desc">Vos clients ne laissent pas d'avis parce qu'ils n'ont pas de raison suffisante. Esmy crée cette raison avec une mécanique ludique — et une récompense immédiate. Résultat : +300% d'avis chez certains commerçants.</p>
         <ul class="feature-list">
           <li>Lots entièrement personnalisables (café, réduction, cadeau…)</li>
           <li>Probabilités configurables par lot, roue temps réel</li>
@@ -763,19 +763,45 @@ const BODY = `<!-- NAV -->
           <div style="text-align:center;margin-bottom:14px;">
             <div style="font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--g400);margin-bottom:6px;">Votre roue en live</div>
             <div style="display:flex;justify-content:center;">
-              <svg width="180" height="180" viewBox="0 0 200 200">
+              <svg width="200" height="200" viewBox="0 0 200 200">
                 <defs>
-                  <clipPath id="circ"><circle cx="100" cy="100" r="96"/></clipPath>
+                  <clipPath id="circ"><circle cx="100" cy="100" r="92"/></clipPath>
+                  <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.25)"/></filter>
+                  <radialGradient id="hubGrad" cx="40%" cy="35%"><stop offset="0%" stop-color="#fff"/><stop offset="100%" stop-color="#e8e0d5"/></radialGradient>
                 </defs>
+                <!-- Outer ring -->
+                <circle cx="100" cy="100" r="96" fill="#1a1a1a" filter="url(#shadow)"/>
+                <circle cx="100" cy="100" r="93" fill="none" stroke="#C9A96E" stroke-width="1.5"/>
+                <!-- Segments -->
                 <g clip-path="url(#circ)">
-                  <path d="M100 100 L196 100 A96 96 0 0 0 100 4Z" fill="#111827"/>
-                  <path d="M100 100 L100 4 A96 96 0 0 0 4 100Z" fill="#F97316"/>
-                  <path d="M100 100 L4 100 A96 96 0 0 0 100 196Z" fill="#374151"/>
-                  <path d="M100 100 L100 196 A96 96 0 0 0 196 100Z" fill="#F59E0B"/>
+                  <path d="M100 100 L192 100 A92 92 0 0 0 146 21Z" fill="#1C1C1C"/>
+                  <path d="M100 100 L146 21 A92 92 0 0 0 54 21Z" fill="#F97316"/>
+                  <path d="M100 100 L54 21 A92 92 0 0 0 8 100Z" fill="#1C1C1C"/>
+                  <path d="M100 100 L8 100 A92 92 0 0 0 54 179Z" fill="#C9A96E"/>
+                  <path d="M100 100 L54 179 A92 92 0 0 0 146 179Z" fill="#1C1C1C"/>
+                  <path d="M100 100 L146 179 A92 92 0 0 0 192 100Z" fill="#F97316"/>
+                  <!-- Divider lines -->
+                  <line x1="100" y1="100" x2="192" y2="100" stroke="#C9A96E" stroke-width="0.8" opacity="0.6"/>
+                  <line x1="100" y1="100" x2="146" y2="21" stroke="#C9A96E" stroke-width="0.8" opacity="0.6"/>
+                  <line x1="100" y1="100" x2="54" y2="21" stroke="#C9A96E" stroke-width="0.8" opacity="0.6"/>
+                  <line x1="100" y1="100" x2="8" y2="100" stroke="#C9A96E" stroke-width="0.8" opacity="0.6"/>
+                  <line x1="100" y1="100" x2="54" y2="179" stroke="#C9A96E" stroke-width="0.8" opacity="0.6"/>
+                  <line x1="100" y1="100" x2="146" y2="179" stroke="#C9A96E" stroke-width="0.8" opacity="0.6"/>
+                  <!-- Emojis -->
+                  <text x="158" y="68" font-size="16" text-anchor="middle">🍕</text>
+                  <text x="100" y="32" font-size="16" text-anchor="middle">🏝️</text>
+                  <text x="42" y="68" font-size="16" text-anchor="middle">☕</text>
+                  <text x="42" y="145" font-size="16" text-anchor="middle">🎁</text>
+                  <text x="100" y="178" font-size="16" text-anchor="middle">🥂</text>
+                  <text x="158" y="145" font-size="16" text-anchor="middle">💳</text>
                 </g>
-                <circle cx="100" cy="100" r="22" fill="white" stroke="#111827" stroke-width="2"/>
-                <text x="100" y="105" font-size="11" fill="#111827" text-anchor="middle" font-weight="700">ESMY</text>
-                <polygon points="100,0 94,14 106,14" fill="#111827"/>
+                <!-- Hub -->
+                <circle cx="100" cy="100" r="22" fill="url(#hubGrad)" stroke="#C9A96E" stroke-width="1.5"/>
+                <text x="100" y="97" font-size="8" fill="#1a1a1a" text-anchor="middle" font-weight="700" letter-spacing="1">ESMY</text>
+                <text x="100" y="107" font-size="6" fill="#C9A96E" text-anchor="middle" font-weight="600" letter-spacing="1.5">✦</text>
+                <!-- Pointer -->
+                <polygon points="100,4 95,18 105,18" fill="#C9A96E"/>
+                <polygon points="100,4 95,18 105,18" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
               </svg>
             </div>
           </div>
@@ -799,6 +825,13 @@ const BODY = `<!-- NAV -->
               <div style="font-size:18px;margin-bottom:3px;">🎁</div>
               <div style="font-size:11px;font-weight:700;">Bon 20€</div>
               <div style="font-size:10px;color:var(--g400);">15%</div>
+            </div>
+          </div>
+          <div style="margin-top:16px;padding:14px 16px;background:white;border:1px solid var(--g200);border-radius:10px;display:flex;align-items:center;gap:12px;">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(249,115,22,.1);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">📊</div>
+            <div>
+              <div style="font-size:12.5px;font-weight:700;color:var(--slate);margin-bottom:2px;">Données clients collectées automatiquement</div>
+              <div style="font-size:12px;color:var(--textsub);">Récupérez l'email de chaque participant et utilisez-les pour des campagnes marketing ciblées — email, SMS, promotions saisonnières.</div>
             </div>
           </div>
         </div>
@@ -965,7 +998,7 @@ const BODY = `<!-- NAV -->
         <ul class="plan-features">
           <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 5" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Réponses IA aux avis</li>
           <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 5" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>QR code imprimable</li>
-          <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 5" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Jusqu'à 100 avis / mois</li>
+          <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 5" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Avis illimités</li>
           <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 5" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Dashboard basique</li>
           <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M5 9h8" stroke="#ccc" stroke-width="2" stroke-linecap="round"/></svg><span class="pf-no">Roue de fortune</span></li>
           <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M5 9h8" stroke="#ccc" stroke-width="2" stroke-linecap="round"/></svg><span class="pf-no">SMS post-visite</span></li>
@@ -1014,7 +1047,7 @@ const BODY = `<!-- NAV -->
 <section class="cta-section">
   <div class="container">
     <h2>Prêt à être #1 sur Google Maps ?</h2>
-    <p>Rejoignez 340+ commerces qui dominent leur réputation locale avec Esmy.<br>Configuration en 3 minutes. Premiers avis en 24h.</p>
+    <p>Rejoignez les premiers commerçants qui dominent leur réputation locale avec Esmy.<br>Configuration en 3 minutes. Premiers avis en moins de 24h.</p>
     <div class="cta-actions">
       <a href="#tarifs" class="btn-white-cta">
         Démarrer gratuitement
@@ -1034,7 +1067,6 @@ const BODY = `<!-- NAV -->
           <div class="logo-icon">⭐</div>
           esmy
         </a>
-        <p>La plateforme de réputation pour les commerces locaux. Plus d'avis, meilleure note, trouvé en premier.</p>
       </div>
       <div class="footer-col">
         <h4>Produit</h4>
