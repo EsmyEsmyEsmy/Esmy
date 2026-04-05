@@ -1421,6 +1421,14 @@ function notif(msg) {
 function initDashboard() {
   setTimeout(() => { initWheelConfig(); drawQRDash(); }, 100);
 }
+
+// Auto-login if coming from authenticated session
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('auth') === '1') {
+    doLogin();
+  }
+})();
 </script>
 
 <!-- ═══════════════════════════════════
