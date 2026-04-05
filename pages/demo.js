@@ -82,9 +82,9 @@ const BODY = `<nav>
   <div class="container">
     <div class="eyebrow">Google Business Profile API — Demo</div>
     <h1>How Esmy integrates with<br>Google Business Profile</h1>
-    <p>Esmy is an approved partner of the Google Business Profile API. Here is a transparent overview of how we connect to your Google listing — securely and officially.</p>
+    <p>Esmy has submitted a formal access request to the Google Business Profile API. This page transparently documents how we intend to integrate with your Google listing — securely and in full compliance with Google's policies.</p>
     <div class="compliance-row">
-      <span class="cp-tag">✓ Official Google API Partner</span>
+      <span class="cp-tag">API Access Request Submitted</span>
       <span class="cp-tag">✓ OAuth 2.0 Secure</span>
       <span class="cp-tag">✓ GDPR Compliant</span>
       <span class="cp-tag">✓ Read-only unless you publish</span>
