@@ -138,7 +138,8 @@ const BODY = `<nav>
     <ul>
       <li><strong>Stripe</strong> — Traitement des paiements (conforme PCI-DSS)</li>
       <li><strong>Vercel</strong> — Hébergement de la plateforme web</li>
-      <li><strong>Anthropic</strong> — API IA pour la génération de réponses</li>
+      <li><strong>Anthropic</strong> — API IA pour la génération de réponses aux avis</li>
+      <li><strong>Supabase</strong> — Base de données et authentification (hébergé en France, UE)</li>
     </ul>
     <p>Tous les sous-traitants sont liés par un accord de traitement des données (DPA) conforme au RGPD.</p>
 
