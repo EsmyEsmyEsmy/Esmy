@@ -1115,7 +1115,12 @@ const SCRIPTS = `const obs = new IntersectionObserver((entries) => {
     if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 70);
   });
 }, { threshold: 0.08 });
-document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));`
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+// Redirect Supabase auth tokens to /confirm
+if (typeof window !== 'undefined' && window.location.hash.includes('access_token')) {
+  window.location.href = '/confirm' + window.location.hash;
+}`
 
 export default function Page() {
   return (
