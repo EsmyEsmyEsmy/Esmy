@@ -20,7 +20,9 @@ export default function Dashboard() {
       // Pass access token to iframe via URL param so it can make authenticated requests
       const token = data.session.access_token
       const userId = data.session.user.id
-      setIframeSrc(`/dashboard-app.html?auth=1&token=${encodeURIComponent(token)}&uid=${userId}`)
+      const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+      const supaUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+      setIframeSrc(`/dashboard-app.html?auth=1&token=${encodeURIComponent(token)}&uid=${userId}&key=${encodeURIComponent(anonKey)}&url=${encodeURIComponent(supaUrl)}`)
       setChecking(false)
     })
   }, [])
