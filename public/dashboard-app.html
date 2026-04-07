@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="sb-key" content="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRseXRham5xdGJ0bmxpd25ramFzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzOTc2MjIsImV4cCI6MjA5MDk3MzYyMn0.Qdz9aMPOtRuI3kCWXb1SFOBqbv5BFnRkXRHMRqOmYFM">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Esmy — Dashboard</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
@@ -941,6 +942,28 @@ canvas#wheel-config { border-radius: 50%; box-shadow: 0 4px 24px rgba(0,0,0,0.08
               </div>
             </div>
 
+            <!-- Wheel URL config -->
+            <div class="card" style="margin-bottom:16px">
+              <div class="card-header"><div class="card-title">URL de votre roue</div></div>
+              <div class="card-body">
+                <div class="field-group" style="margin-bottom:12px">
+                  <div class="field-label">Slug (identifiant unique)</div>
+                  <div style="display:flex;gap:8px;align-items:center">
+                    <span style="font-size:12.5px;color:var(--t3);white-space:nowrap">esmy.ai/r/</span>
+                    <input class="field-input" id="wheel-slug" placeholder="pizza-du-soleil" style="flex:1" oninput="updatePreviewLink()">
+                  </div>
+                  <div style="font-size:11.5px;color:var(--t3);margin-top:5px">Uniquement lettres minuscules, chiffres et tirets</div>
+                </div>
+                <div class="field-group" style="margin-bottom:12px">
+                  <div class="field-label">Lien Google Maps / Avis</div>
+                  <input class="field-input" id="wheel-google-url" placeholder="https://maps.google.com/..." >
+                  <div style="font-size:11.5px;color:var(--t3);margin-top:5px">Le lien que vos clients voient pour laisser un avis</div>
+                </div>
+                <button class="btn btn-primary" style="width:100%" onclick="saveWheelConfig()">💾 Sauvegarder & publier</button>
+                <div id="save-status" style="text-align:center;font-size:12.5px;margin-top:8px;color:var(--green);display:none">✅ Roue publiée sur esmy.ai/r/<span id="save-slug"></span></div>
+              </div>
+            </div>
+
             <div class="card">
               <div class="card-header"><div class="card-title">Règles de participation</div></div>
               <div class="card-body">
@@ -973,7 +996,7 @@ canvas#wheel-config { border-radius: 50%; box-shadow: 0 4px 24px rgba(0,0,0,0.08
                   <canvas id="wheel-config" width="280" height="280"></canvas>
                 </div>
                 <button class="btn btn-ghost btn-sm" onclick="testSpin()">▶ Tester le tour</button>
-                <a href="landing-client" target="_blank" class="btn btn-ghost btn-sm" style="text-decoration:none">↗ Voir la page client</a>
+                <a id="preview-link" href="#" target="_blank" class="btn btn-ghost btn-sm" style="text-decoration:none">↗ Voir ma roue</a>
               </div>
             </div>
           </div>
@@ -1415,6 +1438,72 @@ function notif(msg) {
   const n = document.createElement('div'); n.className = 'notif'; n.textContent = msg;
   document.body.appendChild(n);
   setTimeout(() => n.remove(), 3200);
+}
+
+// ─── WHEEL CONFIG SAVE ───
+function updatePreviewLink() {
+  const slug = document.getElementById('wheel-slug').value.trim();
+  const link = document.getElementById('preview-link');
+  if (slug) {
+    link.href = 'https://esmy.ai/r/' + slug;
+    link.style.opacity = '1';
+  } else {
+    link.href = '#';
+    link.style.opacity = '.4';
+  }
+}
+
+async function saveWheelConfig() {
+  const slug = document.getElementById('wheel-slug').value.trim().toLowerCase().replace(/[^a-z0-9-]/g,'');
+  const googleUrl = document.getElementById('wheel-google-url').value.trim();
+
+  if (!slug) { notif('⚠ Entrez un identifiant pour votre roue'); return; }
+
+  // Build prizes from current config
+  const currentPrizes = prizes.map(p => ({
+    ico: p.ico,
+    name: p.name,
+    desc: p.desc || 'Valable chez nous',
+    weight: p.weight,
+    color: p.color || '#F97316'
+  }));
+
+  try {
+    const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
+    const sb = createClient(
+      'https://dlytajnqtbtnliwnkjas.supabase.co',
+      document.querySelector('meta[name=sb-key]')?.content || ''
+    );
+
+    const { data: { user } } = await sb.auth.getUser();
+    if (!user) { notif('⚠ Session expirée, reconnectez-vous'); return; }
+
+    const { error } = await sb.from('wheel_configs').upsert({
+      slug,
+      user_id: user.id,
+      business_name: document.getElementById('sb-biz-name').textContent,
+      business_emoji: document.getElementById('sb-biz-ico').textContent,
+      google_maps_url: googleUrl,
+      prizes: currentPrizes,
+      active: true
+    }, { onConflict: 'slug' });
+
+    if (error) {
+      if (error.code === '23505') { notif('⚠ Ce slug est déjà pris, choisissez-en un autre'); }
+      else { notif('⚠ Erreur: ' + error.message); }
+      return;
+    }
+
+    document.getElementById('save-slug').textContent = slug;
+    document.getElementById('save-status').style.display = 'block';
+    document.getElementById('wheel-slug').value = slug;
+    updatePreviewLink();
+    notif('✅ Roue publiée sur esmy.ai/r/' + slug);
+
+  } catch(err) {
+    notif('⚠ Impossible de sauvegarder. Vérifiez votre connexion.');
+    console.error(err);
+  }
 }
 
 // ─── INIT ───
