@@ -1659,7 +1659,9 @@ async function saveWheelConfig() {
 
     document.getElementById('save-slug').textContent = slug;
     document.getElementById('save-status').style.display = 'block';
+    currentSlug = slug;
     updatePreviewLink();
+    drawQRDash();
     notif('✅ Roue publiée sur esmy.ai/r/' + slug);
 
   } catch(err) {
@@ -1717,6 +1719,9 @@ async function loadWheelConfig() {
       }
     }
 
+    // Refresh QR if collect panel is visible
+    currentSlug = config.slug;
+    setTimeout(drawQRDash, 200);
     notif('✅ Configuration chargée : esmy.ai/r/' + config.slug);
   } catch(err) {
     console.log('No existing wheel config found');
