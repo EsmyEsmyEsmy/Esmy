@@ -2,10 +2,12 @@ import { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
 import Head from 'next/head'
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-)
+function getSupabase() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  if (!url || !key) throw new Error('Variables Supabase manquantes. Contactez le support.')
+  return createClient(url, key)
+}
 
 export default function Login() {
   const [mode, setMode] = useState('login')
@@ -22,14 +24,14 @@ export default function Login() {
     setError(''); setSuccess(''); setLoading(true)
     try {
       if (mode === 'signup') {
-        const { error } = await supabase.auth.signUp({
+        const { error } = await getSupabase().auth.signUp({
           email, password,
           options: { data: { full_name: name } }
         })
         if (error) throw error
         setSuccess('Compte créé ! Vérifiez votre email pour confirmer votre inscription.')
       } else {
-        const { error } = await supabase.auth.signInWithPassword({ email, password })
+        const { error } = await getSupabase().auth.signInWithPassword({ email, password })
         if (error) throw error
         window.location.href = '/dashboard'
       }
@@ -44,7 +46,7 @@ export default function Login() {
   }
 
   async function googleLogin() {
-    await supabase.auth.signInWithOAuth({
+    await getSupabase().auth.signInWithOAuth({
       provider: 'google',
       options: { redirectTo: window.location.origin + '/dashboard' }
     })
@@ -55,9 +57,9 @@ export default function Login() {
     body{font-family:'Plus Jakarta Sans',sans-serif;background:#111827;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;overflow:hidden}
     body::before{content:'';position:fixed;top:-200px;right:-200px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,.1) 0%,transparent 70%);pointer-events:none}
     .card{background:#1F2937;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:48px 44px;width:100%;max-width:420px;box-shadow:0 24px 80px rgba(0,0,0,.4);position:relative;z-index:1}
-    .logo{display:flex;align-items:center;gap:10px;margin-bottom:32px;justify-content:center}
+    .logo{display:flex;align-items:center;gap:0;margin-bottom:32px;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.02em}
     .logo-icon{width:36px;height:36px;background:#F97316;border-radius:9px;display:flex;align-items:center;justify-content:center}
-    .logo-text{font-size:22px;font-weight:800;color:white;letter-spacing:-.5px}
+    
     h1{font-size:24px;font-weight:800;color:white;margin-bottom:6px;letter-spacing:-.5px;text-align:center}
     .sub{font-size:14px;color:rgba(255,255,255,.45);text-align:center;margin-bottom:32px}
     label{display:block;font-size:12px;font-weight:600;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
@@ -95,13 +97,7 @@ export default function Login() {
 
       <div className="card">
         <div className="logo">
-          <div className="logo-icon">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <circle cx="9" cy="9" r="7" stroke="white" strokeWidth="1.5" fill="none"/>
-              <path d="M9 2L10.2 6H14.5L11.1 8.4 12.3 12.5 9 10.2 5.7 12.5 6.9 8.4 3.5 6H7.8Z" fill="white"/>
-            </svg>
-          </div>
-          <span className="logo-text">esmy</span>
+esmy<span style={{color:'rgba(255,255,255,.35)'}}>.</span>
         </div>
 
         <h1>{mode === 'login' ? 'Bon retour 👋' : 'Créer un compte'}</h1>
