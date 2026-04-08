@@ -1011,7 +1011,7 @@ const BODY = `<!-- NAV -->
           <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M5 9h8" stroke="#ccc" stroke-width="2" stroke-linecap="round"/></svg><span class="pf-no">Roue de fortune</span></li>
           <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M5 9h8" stroke="#ccc" stroke-width="2" stroke-linecap="round"/></svg><span class="pf-no">SMS post-visite</span></li>
         </ul>
-        <a href="/contact" class="btn-plan-ghost">Démarrer</a>
+        <a href="#" class="btn-plan-ghost" onclick="openModal('Starter');return false">Démarrer</a>
       </div>
 
       <div class="plan-card feat fade-in">
@@ -1028,7 +1028,7 @@ const BODY = `<!-- NAV -->
           <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 5" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>SMS post-visite</li>
           <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 5" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Analytics avancés</li>
         </ul>
-        <a href="/contact" class="btn-plan-w">Démarrer le Pro</a>
+        <a href="#" class="btn-plan-w" onclick="openModal('Pro');return false">Démarrer le Pro</a>
       </div>
 
       <div class="plan-card fade-in">
@@ -1044,7 +1044,7 @@ const BODY = `<!-- NAV -->
           <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 5" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Support prioritaire</li>
           <li><svg class="pf-check" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 5" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Onboarding dédié</li>
         </ul>
-        <a href="mailto:contact@esmy.ai" class="btn-plan">Nous contacter →</a>
+        <a href="#" class="btn-plan" onclick="openModal('Agence');return false">Nous contacter →</a>
       </div>
     </div>
     <p style="text-align:center;font-size:13.5px;color:var(--textsub);margin-top:20px;">Sans engagement · Sans frais cachés · Annulez à tout moment</p>
