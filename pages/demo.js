@@ -58,8 +58,7 @@ footer{background:var(--slate);padding:36px 0 22px}
 const BODY = `<nav>
   <div class="nav-inner">
     <a href="/" class="logo">
-      <div class="logo-icon"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="white" stroke-width="1.5" fill="none"/><path d="M9 2L10.2 6H14.5L11.1 8.4 12.3 12.5 9 10.2 5.7 12.5 6.9 8.4 3.5 6H7.8Z" fill="white"/></svg></div>
-      esmy
+      esmy<span style="color:rgba(255,255,255,.35);">.</span>
     </a>
     <div style="display:flex;align-items:center;gap:20px">
       <div class="nav-links">
