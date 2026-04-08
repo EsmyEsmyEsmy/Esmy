@@ -97,7 +97,7 @@ export default function Login() {
 
       <div className="card">
         <div className="logo">
-esmy<span style={{color:'rgba(255,255,255,.35)'}}>.</span>
+Esmy<span style={{color:'rgba(255,255,255,.35)',marginLeft:'-1px'}}>.</span>
         </div>
 
         <h1>{mode === 'login' ? 'Bon retour 👋' : 'Créer un compte'}</h1>
