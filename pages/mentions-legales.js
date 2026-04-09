@@ -6,8 +6,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:va
 .container{max-width:820px;margin:0 auto;padding:0 24px}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,24,39,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;max-width:820px;margin:0 auto;padding:0 24px}
-.logo{display:flex;align-items:center;gap:10px;color:white;text-decoration:none;font-weight:800;font-size:20px}
-.logo-icon{width:32px;height:32px;background:var(--orange);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px}
+.logo{display:flex;align-items:center;gap:0;color:white;text-decoration:none;font-weight:700;font-size:22px;letter-spacing:-.02em;font-family:'Bricolage Grotesque',sans-serif}
+
 .page-hero{background:linear-gradient(145deg,#111827 0%,#1a2538 100%);padding:120px 0 60px;text-align:center}
 .page-hero h1{font-size:36px;font-weight:800;color:white;letter-spacing:-1px;margin-bottom:10px}
 .page-hero p{font-size:14px;color:rgba(255,255,255,.5);margin-top:8px}
@@ -26,7 +26,7 @@ footer{background:var(--slate);padding:32px 0 20px}
 
 const BODY = `<nav>
   <div class="nav-inner">
-    <a href="/" class="logo"><div class="logo-icon">⭐</div>esmy</a>
+    <a href="/" class="logo">esmy<span style="color:rgba(255,255,255,.35);margin-left:-2px;letter-spacing:-.5px;">.</span></a>
     <a href="/" style="font-size:13.5px;color:rgba(255,255,255,.6);text-decoration:none;">← Retour</a>
   </div>
 </nav>
