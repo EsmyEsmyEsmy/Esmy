@@ -1076,7 +1076,7 @@ const BODY = `<!-- NAV -->
       <div class="footer-col">
         <h4>Entreprise</h4>
         <a href="/about">À propos</a>
-        <a href="mailto:contact@esmy.ai">Contact</a>
+        <a href="#" onclick="openModal('Contact');return false">Contact</a>
       </div>
       <div class="footer-col">
         <h4>Légal</h4>
@@ -1102,17 +1102,17 @@ const BODY = `<!-- NAV -->
     <div style="text-align:center;margin-bottom:28px;">
       <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:700;color:#111827;letter-spacing:-.02em;margin:0 auto 14px;text-align:center;">esmy<span style="color:rgba(0,0,0,.25);margin-left:-3px;">.</span></div>
       <div id="modal-plan-badge" style="display:inline-block;background:#F97316;color:white;border-radius:100px;padding:4px 16px;font-size:12px;font-weight:700;margin-bottom:10px;">Plan Pro</div>
-      <h2 style="font-size:24px;font-weight:800;color:#111827;letter-spacing:-.5px;margin-bottom:6px;">Demarrons ensemble</h2>
-      <p style="font-size:14px;color:#6b7280;line-height:1.6;">Laissez vos coordonnees — nous vous contactons <strong style="color:#111827;">sous 24h</strong> pour configurer votre compte.</p>
+      <h2 style="font-size:24px;font-weight:800;color:#111827;letter-spacing:-.5px;margin-bottom:6px;">Démarrons ensemble</h2>
+      <p style="font-size:14px;color:#6b7280;line-height:1.6;">Laissez vos coordonnées — nous vous contactons <strong style="color:#111827;">sous 24h</strong> pour configurer votre compte.</p>
     </div>
     <div id="modal-form">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
         <div>
-          <label style="display:block;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;">Prenom et nom *</label>
+          <label style="display:block;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;">Prénom et nom *</label>
           <input id="cf-name" type="text" placeholder="Marie Dupont" style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:10px;font-size:14px;outline:none;" />
         </div>
         <div>
-          <label style="display:block;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;">Telephone *</label>
+          <label style="display:block;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;">Téléphone *</label>
           <input id="cf-phone" type="tel" placeholder="06 12 34 56 78" style="width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radius:10px;font-size:14px;outline:none;" />
         </div>
       </div>
@@ -1130,8 +1130,8 @@ const BODY = `<!-- NAV -->
     </div>
     <div id="modal-success" style="display:none;text-align:center;padding:20px 0;">
       <div style="font-size:52px;margin-bottom:16px;">&#127881;</div>
-      <h3 style="font-size:22px;font-weight:800;color:#111827;margin-bottom:8px;">Demande envoyee !</h3>
-      <p style="font-size:14px;color:#6b7280;line-height:1.65;margin-bottom:24px;">Merci ! Notre equipe vous contactera <strong style="color:#111827;">sous 24 heures</strong> pour configurer votre compte Esmy.</p>
+      <h3 style="font-size:22px;font-weight:800;color:#111827;margin-bottom:8px;">Demande envoyée !</h3>
+      <p style="font-size:14px;color:#6b7280;line-height:1.65;margin-bottom:24px;">Merci ! Notre équipe vous contactera <strong style="color:#111827;">sous 24 heures</strong> pour configurer votre compte Esmy.</p>
       <button onclick="closeModal()" style="padding:13px 28px;background:#111827;color:white;border:none;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;">Fermer</button>
     </div>
   </div>
