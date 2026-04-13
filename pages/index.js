@@ -803,81 +803,61 @@ const BODY = `<!-- NAV -->
           <li>100% conforme aux règles Google Business</li>
         </ul>
       </div>
-      <div class="feature-visual">
-        <div class="fv-card">
-          <div style="text-align:center;margin-bottom:14px;">
-            <div style="font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--g400);margin-bottom:6px;">Votre roue en live</div>
-            <div style="display:flex;justify-content:center;">
-              <svg width="200" height="200" viewBox="0 0 200 200">
-                <defs>
-                  <clipPath id="circ"><circle cx="100" cy="100" r="92"/></clipPath>
-                  <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.25)"/></filter>
-                  <radialGradient id="hubGrad" cx="40%" cy="35%"><stop offset="0%" stop-color="#fff"/><stop offset="100%" stop-color="#e8e0d5"/></radialGradient>
-                </defs>
-                <!-- Outer ring -->
-                <circle cx="100" cy="100" r="96" fill="#1a1a1a" filter="url(#shadow)"/>
-                <circle cx="100" cy="100" r="93" fill="none" stroke="#C9A96E" stroke-width="1.5"/>
-                <!-- Segments -->
-                <g clip-path="url(#circ)">
-                  <path d="M100 100 L192 100 A92 92 0 0 0 146 21Z" fill="#1C1C1C"/>
-                  <path d="M100 100 L146 21 A92 92 0 0 0 54 21Z" fill="#F97316"/>
-                  <path d="M100 100 L54 21 A92 92 0 0 0 8 100Z" fill="#1C1C1C"/>
-                  <path d="M100 100 L8 100 A92 92 0 0 0 54 179Z" fill="#C9A96E"/>
-                  <path d="M100 100 L54 179 A92 92 0 0 0 146 179Z" fill="#1C1C1C"/>
-                  <path d="M100 100 L146 179 A92 92 0 0 0 192 100Z" fill="#F97316"/>
-                  <!-- Divider lines -->
-                  <line x1="100" y1="100" x2="192" y2="100" stroke="#C9A96E" stroke-width="0.8" opacity="0.6"/>
-                  <line x1="100" y1="100" x2="146" y2="21" stroke="#C9A96E" stroke-width="0.8" opacity="0.6"/>
-                  <line x1="100" y1="100" x2="54" y2="21" stroke="#C9A96E" stroke-width="0.8" opacity="0.6"/>
-                  <line x1="100" y1="100" x2="8" y2="100" stroke="#C9A96E" stroke-width="0.8" opacity="0.6"/>
-                  <line x1="100" y1="100" x2="54" y2="179" stroke="#C9A96E" stroke-width="0.8" opacity="0.6"/>
-                  <line x1="100" y1="100" x2="146" y2="179" stroke="#C9A96E" stroke-width="0.8" opacity="0.6"/>
-                  <!-- Emojis -->
-                  <text x="158" y="68" font-size="16" text-anchor="middle">🍕</text>
-                  <text x="100" y="32" font-size="16" text-anchor="middle">🏝️</text>
-                  <text x="42" y="68" font-size="16" text-anchor="middle">☕</text>
-                  <text x="42" y="145" font-size="16" text-anchor="middle">🎁</text>
-                  <text x="100" y="178" font-size="16" text-anchor="middle">🥂</text>
-                  <text x="158" y="145" font-size="16" text-anchor="middle">💳</text>
-                </g>
-                <!-- Hub -->
-                <circle cx="100" cy="100" r="22" fill="url(#hubGrad)" stroke="#C9A96E" stroke-width="1.5"/>
-                <text x="100" y="97" font-size="8" fill="#1a1a1a" text-anchor="middle" font-weight="700" letter-spacing="1">ESMY</text>
-                <text x="100" y="107" font-size="6" fill="#C9A96E" text-anchor="middle" font-weight="600" letter-spacing="1.5">✦</text>
-                <!-- Pointer -->
-                <polygon points="100,4 95,18 105,18" fill="#C9A96E"/>
-                <polygon points="100,4 95,18 105,18" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
-              </svg>
+      <div class="      <div class="feature-visual" id="lp-fv">
+        <!-- DARK LUXURY WHEEL CARD -->
+        <div style="background:#080808;border:1px solid rgba(201,168,76,.2);padding:26px 20px 20px;position:relative;overflow:hidden;width:100%;max-width:360px;">
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 15%,rgba(201,168,76,.07) 0%,transparent 70%);pointer-events:none;"></div>
+          <!-- Header -->
+          <div style="text-align:center;margin-bottom:18px;position:relative;">
+            <div style="font-size:8px;letter-spacing:5px;color:#C9A84C;text-transform:uppercase;margin-bottom:5px;font-family:'Montserrat',sans-serif;">Votre roue en live</div>
+            <div style="font-family:'Playfair Display',serif;font-size:15px;font-weight:700;font-style:italic;color:#F0D080;letter-spacing:-.3px;">Cliquez pour tourner</div>
+          </div>
+          <!-- Wheel stage -->
+          <div style="position:relative;width:100%;padding-bottom:100%;margin-bottom:16px;" id="lp-stage">
+            <!-- Gold conic ring -->
+            <div style="position:absolute;inset:-5px;border-radius:50%;background:conic-gradient(from 0deg,#8A6A1A,#F0D080,#C9A84C,#8A6A1A,#F0D080,#C9A84C,#8A6A1A,#F0D080,#C9A84C,#8A6A1A,#F0D080,#C9A84C,#8A6A1A);padding:2px;z-index:0;">
+              <div style="width:100%;height:100%;border-radius:50%;background:#080808;"></div>
+            </div>
+            <!-- Glow -->
+            <div style="position:absolute;inset:-18px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(201,168,76,.12) 0%,rgba(201,168,76,.04) 45%,transparent 70%);pointer-events:none;z-index:0;animation:lpBreathe 3s ease-in-out infinite;"></div>
+            <!-- Canvas -->
+            <canvas id="lp-canvas" onclick="lpSpin()" style="position:absolute;inset:0;width:100%;height:100%;border-radius:50%;cursor:pointer;z-index:1;filter:drop-shadow(0 0 16px rgba(201,168,76,.15));"></canvas>
+            <!-- Pointer -->
+            <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);z-index:5;filter:drop-shadow(0 3px 6px rgba(201,168,76,.5));">
+              <svg width="14" height="22" viewBox="0 0 14 22"><polygon points="7,0 14,22 7,16 0,22" fill="#C9A84C"/><polygon points="7,3 11,18 7,13 3,18" fill="#F0D080"/></svg>
+            </div>
+            <!-- Center boss -->
+            <div onclick="lpSpin()" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#F0D080,#8A6A1A);border:2px solid #C9A84C;box-shadow:0 0 18px rgba(201,168,76,.45),inset 0 0 8px rgba(0,0,0,.35);z-index:6;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translate(-50%,-50%) scale(1.1)';this.style.boxShadow='0 0 30px rgba(201,168,76,.7),inset 0 0 8px rgba(0,0,0,.35)'" onmouseout="this.style.transform='translate(-50%,-50%)';this.style.boxShadow='0 0 18px rgba(201,168,76,.45),inset 0 0 8px rgba(0,0,0,.35)'">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#080808" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5,3 19,12 5,21"/></svg>
             </div>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-            <div style="background:white;border:1px solid var(--g200);border-radius:8px;padding:10px;text-align:center;">
-              <div style="font-size:18px;margin-bottom:3px;">🍕</div>
-              <div style="font-size:11px;font-weight:700;">Pizza offerte</div>
-              <div style="font-size:10px;color:var(--g400);">30%</div>
+          <!-- Result -->
+          <div id="lp-result" style="text-align:center;min-height:42px;transition:all .45s cubic-bezier(.175,.885,.32,1.275);opacity:0;transform:translateY(10px);">
+            <div style="font-size:8px;letter-spacing:4px;color:#C9A84C;text-transform:uppercase;font-family:'Montserrat',sans-serif;margin-bottom:3px;">Lot gagné</div>
+            <div id="lp-result-txt" style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;font-style:italic;background:linear-gradient(135deg,#F0D080,#E8B4A0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;"></div>
+          </div>
+          <!-- Lots grid -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(201,168,76,.12);">
+            <div style="display:flex;align-items:center;gap:7px;padding:6px 8px;background:rgba(201,168,76,.04);border:0.5px solid rgba(201,168,76,.12);">
+              <span style="font-size:13px;">☕</span>
+              <div><div style="font-size:10px;font-weight:600;color:#F5EDD5;font-family:'Montserrat',sans-serif;">Café offert</div><div style="font-size:9px;color:rgba(201,168,76,.6);">40%</div></div>
             </div>
-            <div style="background:white;border:1px solid var(--g200);border-radius:8px;padding:10px;text-align:center;">
-              <div style="font-size:18px;margin-bottom:3px;">🏝️</div>
-              <div style="font-size:11px;font-weight:700;">Week-end spa</div>
-              <div style="font-size:10px;color:var(--g400);">2%</div>
+            <div style="display:flex;align-items:center;gap:7px;padding:6px 8px;background:rgba(201,168,76,.04);border:0.5px solid rgba(201,168,76,.12);">
+              <span style="font-size:13px;">🍕</span>
+              <div><div style="font-size:10px;font-weight:600;color:#F5EDD5;font-family:'Montserrat',sans-serif;">Pizza offerte</div><div style="font-size:9px;color:rgba(201,168,76,.6);">20%</div></div>
             </div>
-            <div style="background:white;border:1px solid var(--g200);border-radius:8px;padding:10px;text-align:center;">
-              <div style="font-size:18px;margin-bottom:3px;">☕</div>
-              <div style="font-size:11px;font-weight:700;">Café offert</div>
-              <div style="font-size:10px;color:var(--g400);">40%</div>
+            <div style="display:flex;align-items:center;gap:7px;padding:6px 8px;background:rgba(201,168,76,.04);border:0.5px solid rgba(201,168,76,.12);">
+              <span style="font-size:13px;">🎁</span>
+              <div><div style="font-size:10px;font-weight:600;color:#F5EDD5;font-family:'Montserrat',sans-serif;">Bon 20€</div><div style="font-size:9px;color:rgba(201,168,76,.6);">25%</div></div>
             </div>
-            <div style="background:white;border:1px solid var(--g200);border-radius:8px;padding:10px;text-align:center;">
-              <div style="font-size:18px;margin-bottom:3px;">🎁</div>
-              <div style="font-size:11px;font-weight:700;">Bon 20€</div>
-              <div style="font-size:10px;color:var(--g400);">15%</div>
+            <div style="display:flex;align-items:center;gap:7px;padding:6px 8px;background:rgba(201,168,76,.04);border:0.5px solid rgba(201,168,76,.12);">
+              <span style="font-size:13px;">🏝️</span>
+              <div><div style="font-size:10px;font-weight:600;color:#F5EDD5;font-family:'Montserrat',sans-serif;">Week-end spa</div><div style="font-size:9px;color:rgba(201,168,76,.6);">5%</div></div>
             </div>
           </div>
-          <div style="margin-top:16px;padding:14px 16px;background:white;border:1px solid var(--g200);border-radius:10px;display:flex;align-items:center;gap:12px;">
-            <div style="width:36px;height:36px;border-radius:9px;background:rgba(249,115,22,.1);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">📊</div>
-            <div>
-              <div style="font-size:12.5px;font-weight:700;color:var(--slate);margin-bottom:2px;">Données clients collectées automatiquement</div>
-              <div style="font-size:12px;color:var(--textsub);">Récupérez l'email de chaque participant et utilisez-les pour des campagnes marketing ciblées — email, SMS, promotions saisonnières.</div>
-            </div>
+          <div style="margin-top:12px;padding:10px 12px;background:rgba(249,115,22,.05);border:0.5px solid rgba(249,115,22,.2);display:flex;align-items:center;gap:10px;">
+            <div style="font-size:13px;flex-shrink:0;">📊</div>
+            <div style="font-size:10.5px;color:rgba(245,237,213,.55);line-height:1.5;font-family:'Montserrat',sans-serif;">Données clients collectées automatiquement après chaque spin.</div>
           </div>
         </div>
       </div>
@@ -1188,6 +1168,204 @@ const SCRIPTS = `const obs = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.08 });
 document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+// ── LUXURY WHEEL ────────────────────────────────────────────────
+(function(){
+  var segs=[
+    {label:'Café offert',    weight:40,color:'#130C00',text:'#F0D080'},
+    {label:'Pizza offerte',  weight:20,color:'#0A1200',text:'#C9A84C'},
+    {label:'Bon 20€',        weight:25,color:'#080A1A',text:'#E8B4A0'},
+    {label:'Dessert offert', weight:10,color:'#1A0A0D',text:'#F0D080'},
+    {label:'Week-end spa',   weight:5, color:'#050A14',text:'#C9A84C'},
+  ];
+  var angle=0,spinning=false;
+  var cv,ctx,size;
+
+  function setup(){
+    var stage=document.getElementById('lp-stage');
+    if(!stage)return;
+    cv=document.getElementById('lp-canvas');
+    size=stage.offsetWidth;
+    cv.width=size; cv.height=size;
+    draw(angle);
+  }
+
+  function draw(a){
+    if(!cv)return;
+    var w=size,cx=w/2,cy=w/2,r=w/2-3;
+    ctx=cv.getContext('2d');
+    ctx.clearRect(0,0,w,w);
+    var total=segs.reduce(function(s,g){return s+g.weight;},0);
+    var sa=a-Math.PI/2;
+    segs.forEach(function(seg){
+      var sl=seg.weight/total*Math.PI*2,ea=sa+sl,mid=sa+sl/2;
+      // fill
+      ctx.beginPath(); ctx.moveTo(cx,cy);
+      ctx.arc(cx,cy,r-1,sa,ea); ctx.closePath();
+      ctx.fillStyle=seg.color; ctx.fill();
+      // depth gradient
+      var g=ctx.createRadialGradient(cx,cy,0,cx,cy,r);
+      g.addColorStop(0,'rgba(255,255,255,.04)');
+      g.addColorStop(.65,'rgba(0,0,0,0)');
+      g.addColorStop(1,'rgba(0,0,0,.28)');
+      ctx.fillStyle=g; ctx.fill();
+      // gold dividers
+      ctx.beginPath(); ctx.moveTo(cx,cy);
+      ctx.lineTo(cx+r*Math.cos(sa),cy+r*Math.sin(sa));
+      ctx.strokeStyle='rgba(201,168,76,.55)'; ctx.lineWidth=1.2; ctx.stroke();
+      // text
+      ctx.save(); ctx.translate(cx,cy); ctx.rotate(mid);
+      ctx.textAlign='right';
+      ctx.fillStyle=seg.text;
+      var fs=Math.max(8,Math.min(12,r*.068));
+      ctx.font='600 '+fs+'px Montserrat,sans-serif';
+      ctx.shadowColor='rgba(0,0,0,.9)'; ctx.shadowBlur=5;
+      ctx.fillText(seg.label,r-14,fs*.35,r*.62);
+      ctx.restore();
+      sa=ea;
+    });
+    // outer ring
+    ctx.beginPath(); ctx.arc(cx,cy,r-1,0,Math.PI*2);
+    ctx.strokeStyle='rgba(201,168,76,.65)'; ctx.lineWidth=1.5; ctx.stroke();
+    // dot ring
+    var dots=36;
+    for(var i=0;i<dots;i++){
+      var da=i/dots*Math.PI*2;
+      ctx.beginPath();
+      ctx.arc(cx+(r-7)*Math.cos(da),cy+(r-7)*Math.sin(da),1,0,Math.PI*2);
+      ctx.fillStyle=i%3===0?'rgba(201,168,76,.7)':'rgba(201,168,76,.2)';
+      ctx.fill();
+    }
+    // center hub
+    ctx.beginPath(); ctx.arc(cx,cy,r*.14,0,Math.PI*2);
+    ctx.fillStyle='rgba(8,8,8,.96)'; ctx.fill();
+    ctx.strokeStyle='rgba(201,168,76,.5)'; ctx.lineWidth=1; ctx.stroke();
+  }
+
+  window.lpSpin=function(){
+    if(spinning)return;
+    spinning=true;
+    var res=document.getElementById('lp-result');
+    res.style.opacity='0'; res.style.transform='translateY(10px)';
+    var total=segs.reduce(function(s,g){return s+g.weight;},0);
+    var rand=Math.random()*total,acc=0,ti=0;
+    for(var i=0;i<segs.length;i++){acc+=segs[i].weight;if(rand<acc){ti=i;break;}}
+    var slices=segs.map(function(s){return s.weight/total*Math.PI*2;});
+    var ss=slices.slice(0,ti).reduce(function(a,b){return a+b;},0);
+    var ta=ss+slices[ti]/2;
+    var end=angle+7*Math.PI*2+(Math.PI*1.5-ta)+(Math.random()-.5)*slices[ti]*.4;
+    var t0=performance.now(),dur=5500,start=angle;
+    function ease(t){return 1-Math.pow(1-t,4);}
+    function frame(now){
+      var t=Math.min((now-t0)/dur,1);
+      angle=start+(end-start)*ease(t);
+      draw(angle);
+      if(t<1){requestAnimationFrame(frame);}
+      else{
+        angle=end%(Math.PI*2); draw(angle); spinning=false;
+        document.getElementById('lp-result-txt').textContent=segs[ti].label;
+        res.style.opacity='1'; res.style.transform='translateY(0)';
+      }
+    }
+    requestAnimationFrame(frame);
+  };
+
+  // breathe keyframe via style tag
+  if(!document.getElementById('lp-kf')){
+    var s=document.createElement('style');
+    s.id='lp-kf';
+    s.textContent='@keyframes lpBreathe{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.06);opacity:1}}';
+    document.head.appendChild(s);
+  }
+
+  window.addEventListener('load',setup);
+  window.addEventListener('resize',function(){if(!cv)return;var stage=document.getElementById('lp-stage');if(!stage)return;size=stage.offsetWidth;cv.width=size;cv.height=size;draw(angle);});
+})();
+
+// ── LUXURY WHEEL ──
+(function(){
+  var lpSegs = [
+    {label:'Café offert',weight:40,color:'#130800',text:'#F0D080'},
+    {label:'Pizza offerte',weight:20,color:'#0a1200',text:'#C9A84C'},
+    {label:'Bon 20€',weight:25,color:'#0a0a1a',text:'#E8B4A0'},
+    {label:'Dessert offert',weight:10,color:'#1a0a0d',text:'#F0D080'},
+    {label:'Week-end spa',weight:5,color:'#050a14',text:'#C9A84C'},
+  ];
+  var lpAngle=0, lpSpinning=false;
+  function lpSetup(){
+    var stage=document.getElementById('lp-wheel-stage');
+    if(!stage) return;
+    var cv=document.getElementById('lp-wheel');
+    var size=stage.offsetWidth;
+    cv.width=size; cv.height=size;
+    cv.style.height=size+'px';
+    lpDraw(lpAngle);
+  }
+  function lpDraw(angle){
+    var cv=document.getElementById('lp-wheel');
+    if(!cv) return;
+    var ctx=cv.getContext('2d');
+    var w=cv.width,cx=w/2,cy=w/2,r=w/2-3;
+    ctx.clearRect(0,0,w,w);
+    var total=lpSegs.reduce(function(s,g){return s+g.weight;},0);
+    var sa=angle-Math.PI/2;
+    lpSegs.forEach(function(seg){
+      var slice=seg.weight/total*Math.PI*2;
+      var ea=sa+slice,mid=sa+slice/2;
+      ctx.beginPath(); ctx.moveTo(cx,cy);
+      ctx.arc(cx,cy,r-1,sa,ea); ctx.closePath();
+      ctx.fillStyle=seg.color; ctx.fill();
+      var grad=ctx.createRadialGradient(cx,cy,0,cx,cy,r);
+      grad.addColorStop(0,'rgba(255,255,255,.04)');
+      grad.addColorStop(1,'rgba(0,0,0,.3)');
+      ctx.fillStyle=grad; ctx.fill();
+      ctx.beginPath(); ctx.moveTo(cx,cy);
+      ctx.lineTo(cx+r*Math.cos(sa),cy+r*Math.sin(sa));
+      ctx.strokeStyle='rgba(201,168,76,.5)'; ctx.lineWidth=1; ctx.stroke();
+      ctx.save(); ctx.translate(cx,cy); ctx.rotate(mid);
+      ctx.textAlign='right'; ctx.fillStyle=seg.text;
+      var fs=Math.max(8,Math.min(11,r*.065));
+      ctx.font='600 '+fs+'px Montserrat,sans-serif';
+      ctx.shadowColor='rgba(0,0,0,.9)'; ctx.shadowBlur=4;
+      ctx.fillText(seg.label,r-10,fs*.35,r*.6);
+      ctx.restore();
+      sa=ea;
+    });
+    ctx.beginPath(); ctx.arc(cx,cy,r-1,0,Math.PI*2);
+    ctx.strokeStyle='rgba(201,168,76,.6)'; ctx.lineWidth=1.5; ctx.stroke();
+    ctx.beginPath(); ctx.arc(cx,cy,r*.13,0,Math.PI*2);
+    ctx.fillStyle='rgba(8,8,8,.95)'; ctx.fill();
+    ctx.strokeStyle='rgba(201,168,76,.4)'; ctx.lineWidth=1; ctx.stroke();
+  }
+  window.lpSpin=function(){
+    if(lpSpinning) return;
+    lpSpinning=true;
+    var res=document.getElementById('lp-result');
+    res.style.opacity=0; res.style.transform='translateY(8px)';
+    var total=lpSegs.reduce(function(s,g){return s+g.weight;},0);
+    var rand=Math.random()*total,acc=0,ti=0;
+    for(var i=0;i<lpSegs.length;i++){acc+=lpSegs[i].weight;if(rand<acc){ti=i;break;}}
+    var slices=lpSegs.map(function(s){return s.weight/total*Math.PI*2;});
+    var sliceStart=slices.slice(0,ti).reduce(function(a,b){return a+b;},0);
+    var target=sliceStart+slices[ti]/2;
+    var end=lpAngle+6*Math.PI*2+(Math.PI*1.5-target);
+    var start=lpAngle,t0=performance.now(),dur=5000;
+    function frame(now){
+      var t=Math.min((now-t0)/dur,1),ease=1-Math.pow(1-t,4);
+      lpAngle=start+(end-start)*ease;
+      lpDraw(lpAngle);
+      if(t<1){requestAnimationFrame(frame);}
+      else{
+        lpAngle=end%(Math.PI*2); lpDraw(lpAngle); lpSpinning=false;
+        document.getElementById('lp-result-val').textContent=lpSegs[ti].label;
+        res.style.opacity=1; res.style.transform='translateY(0)';
+      }
+    }
+    requestAnimationFrame(frame);
+  };
+  window.addEventListener('load',lpSetup);
+  window.addEventListener('resize',lpSetup);
+})();
 
 function openModal(plan) {
   document.getElementById('modal-plan-badge').textContent = 'Plan ' + plan;
