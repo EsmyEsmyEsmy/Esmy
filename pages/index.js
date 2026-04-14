@@ -302,67 +302,96 @@ const BODY = `
 
 <section class="hero">
   <div class="container">
-    <div style="max-width:860px;margin:0 auto;text-align:center;position:relative;z-index:2;">
-
-      <!-- Authority badge -->
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(22,163,74,.15);border:1px solid rgba(22,163,74,.3);border-radius:100px;padding:6px 16px;font-size:12.5px;color:#4ADE80;font-weight:600;margin-bottom:32px;">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#4ADE80" stroke-width="1.5"/><path d="M4.5 7l1.5 1.5L9.5 5" stroke="#4ADE80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Harvard Business Review · Étude sur 166 000 établissements
-      </div>
-
-      <!-- Main headline -->
-      <h1 class="hero-h1" style="font-size:clamp(32px,5.5vw,64px);margin-bottom:24px;line-height:1.05;">
-        Chaque étoile gagnée sur Google<br>
-        vaut <span class="near" style="font-size:1.1em;padding:2px 12px;">entre 5% et 9%</span><br>
-        de revenus supplémentaires
-      </h1>
-
-      <!-- Sub -->
-      <p style="font-size:clamp(15px,2vw,20px);color:rgba(255,255,255,.7);line-height:1.7;max-width:620px;margin:0 auto 20px;">
-        <strong style="color:white;">92% des consommateurs</strong> refusent de faire affaire avec une entreprise notée sous 4★.
-        Passer de 3.9 à 4.0 n'est pas un détail — c'est le levier le plus puissant de votre croissance locale.
-      </p>
-      <p style="font-size:15px;color:rgba(255,255,255,.5);margin-bottom:40px;">
-        Esmy vous fait monter automatiquement — grâce à la gamification et à l'IA.
-      </p>
-
-      <!-- CTAs -->
-      <div class="hero-actions" style="justify-content:center;margin-bottom:48px;">
-        <a href="/login" class="btn-cta" style="font-size:16px;padding:16px 32px;">
-          Augmenter ma note Google →
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="/demo" class="btn-ghost-w" style="font-size:15px;">Voir comment →</a>
-      </div>
-
-      <!-- 3 Stats -->
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);border-radius:var(--rlg);overflow:hidden;max-width:680px;margin:0 auto 32px;">
-        <div style="background:rgba(255,255,255,.05);padding:28px 20px;text-align:center;">
-          <div style="font-size:44px;font-weight:800;color:var(--orange);letter-spacing:-2px;line-height:1;">+9%</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.55);margin-top:6px;line-height:1.5;">de revenus par étoile<br>gagnée sur Google</div>
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="near-me-pill">
+          <div class="g-dot">G</div>
+          Recherches "near me" · +58% en 2025
         </div>
-        <div style="background:rgba(255,255,255,.05);padding:28px 20px;text-align:center;">
-          <div style="font-size:44px;font-weight:800;color:var(--orange);letter-spacing:-2px;line-height:1;">92%</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.55);margin-top:6px;line-height:1.5;">des clients fuient<br>les notes sous 4★</div>
+        <h1 class="hero-h1">
+          Soyez #1 quand<br>vos clients cherchent<br>
+          <span class="near">"près de moi"</span>
+        </h1>
+        <p class="hero-sub">Esmy collecte automatiquement vos avis Google grâce à la gamification, répond à chaque avis avec l'IA, et vous fait remonter dans le pack local Google — en moins d'une semaine.</p>
+        <div class="hero-actions">
+          <a href="/login" class="btn-cta">
+            Démarrer gratuitement
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="/demo" class="btn-ghost-w">Voir la démo →</a>
         </div>
-        <div style="background:rgba(255,255,255,.05);padding:28px 20px;text-align:center;">
-          <div style="font-size:44px;font-weight:800;color:var(--orange);letter-spacing:-2px;line-height:1;">×3</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.55);margin-top:6px;line-height:1.5;">plus de clics pour<br>les fiches à 4.5★+</div>
+        <div class="hero-social">
+          <div class="avs">
+            <div class="av av-a">M</div>
+            <div class="av av-b">S</div>
+            <div class="av av-c">J</div>
+            <div class="av av-d">L</div>
+          </div>
+          <div class="hero-social-txt">
+            <strong>33 commerçants</strong> inscrits pour la sortie<br>
+            14 jours gratuits · Sans carte bancaire
+          </div>
         </div>
       </div>
 
-      <!-- Social proof -->
-      <div style="display:flex;align-items:center;justify-content:center;gap:12px;">
-        <div style="display:flex;">
-          <div class="av av-a">M</div><div class="av av-b">S</div><div class="av av-c">J</div><div class="av av-d">L</div>
+      <div class="hero-right">
+        <div style="position:relative;">
+          <div class="hero-card">
+            <div class="hc-top">
+              <div class="hc-brand">
+                <div class="hc-logo">🍕</div>
+                <div>
+                  <div class="hc-name">La Pizza du Soleil</div>
+                  <div class="hc-loc">📍 Nice Centre</div>
+                </div>
+              </div>
+              <div class="hc-tag">+28 avis ce mois</div>
+            </div>
+            <div class="near-badge">
+              <div class="nb-icon">🔍</div>
+              <div class="nb-text">
+                Votre fiche apparaît maintenant dans les recherches<br>
+                <strong>"pizza near me · Nice"</strong> — Position #1 dans votre zone
+              </div>
+            </div>
+            <div class="g-listing">
+              <div class="gl-top">
+                <div class="gl-name">La Pizza du Soleil</div>
+                <div class="gl-pos">#1 Local Pack</div>
+              </div>
+              <div><span class="gl-stars">★★★★★</span><span class="gl-count">4.9 (312 avis)</span></div>
+              <div class="gl-tag">🍕 Restaurant · Ouvert · Pizza · Nice</div>
+            </div>
+            <div class="reviews-mini">
+              <div class="rm-item">
+                <div class="rm-av">M</div>
+                <div class="rm-content">
+                  <div class="rm-stars">★★★★★</div>
+                  <div class="rm-text">"Meilleure pizza du quartier, service au top !"</div>
+                  <div class="rm-reply">↳ IA : Merci Marie ! On vous attend avec plaisir 🍕</div>
+                </div>
+              </div>
+              <div class="rm-item">
+                <div class="rm-av b">S</div>
+                <div class="rm-content">
+                  <div class="rm-stars">★★★★★</div>
+                  <div class="rm-text">"Toujours aussi bon, la roue de la chance est super !"</div>
+                  <div class="rm-reply">↳ IA : Merci Sophie ! À très vite ❤️</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fr-card top">
+            <div class="frc-stars">★★★★★</div>
+            <div class="frc-text">J'ai tourné la roue et gagné un dessert !</div>
+            <div class="frc-name">— Camille B.</div>
+          </div>
+          <div class="fr-card bot">
+            <div class="frc-stars">★★★★★</div>
+            <div class="frc-text">De 3.8 à 4.9 en un mois. Incroyable.</div>
+            <div class="frc-name">— Marco V.</div>
+          </div>
         </div>
-        <div style="font-size:13px;color:rgba(255,255,255,.55);">
-          <strong style="color:rgba(255,255,255,.85);">33 commerçants</strong> ont déjà rejoint Esmy · 14 jours gratuits · Sans carte
-        </div>
-      </div>
-
-      <div style="margin-top:20px;font-size:11px;color:rgba(255,255,255,.25);">
-        Sources : Harvard Business Review · BrightLocal Consumer Review Survey 2024
       </div>
     </div>
   </div>
