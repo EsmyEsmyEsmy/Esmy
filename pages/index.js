@@ -867,10 +867,10 @@ function submitContact() {
     if(!cv)return;
     var ctx=cv.getContext('2d'),w=size,cx=w/2,cy=w/2,r=w/2-3;
     ctx.clearRect(0,0,w,w);
-    var total=segs.reduce(function(s,g){return s+g.weight;},0);
     var sa=a-Math.PI/2;
+    var equalSlice=Math.PI*2/segs.length;
     segs.forEach(function(seg){
-      var sl=seg.weight/total*Math.PI*2,ea=sa+sl,mid=sa+sl/2;
+      var sl=equalSlice,ea=sa+sl,mid=sa+sl/2;
       ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,r-1,sa,ea);ctx.closePath();
       ctx.fillStyle=seg.color;ctx.fill();
       var g=ctx.createRadialGradient(cx,cy,0,cx,cy,r);
