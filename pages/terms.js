@@ -71,7 +71,7 @@ const BODY = `<nav>
 
     <h3>Pratiques interdites via Esmy</h3>
     <ul>
-      <li>Inciter à laisser uniquement des avis positifs (la récompense est offerte pour TOUT avis)</li>
+      <li>Conditionner la récompense à la note ou au contenu de l'avis — la récompense est offerte pour tout avis, quelle que soit la note, ou même sans avis si le client choisit de ne pas en laisser</li>
       <li>Dissuader les clients de laisser des avis négatifs</li>
       <li>Publier ou commander des avis faux ou trompeurs</li>
       <li>Utiliser Esmy pour harceler un auteur d'avis</li>
@@ -79,7 +79,7 @@ const BODY = `<nav>
 
     <h3>Pratiques autorisées et conformes</h3>
     <ul>
-      <li>Offrir une récompense pour tout avis sincère, quelle que soit la note</li>
+      <li>Offrir une récompense dans le cadre d'une expérience client gamifiée — sans obligation de laisser un avis ni de contenu spécifique</li>
       <li>Répondre à des avis avec des réponses générées par IA après vérification humaine</li>
       <li>Inviter les clients via QR code à laisser leur expérience honnête</li>
     </ul>
@@ -97,6 +97,16 @@ const BODY = `<nav>
     <p>La plateforme Esmy, son code, ses interfaces et ses contenus sont la propriété exclusive d'Esmy et protégés par le droit de la propriété intellectuelle. L'utilisateur bénéficie d'un droit d'utilisation personnel, non exclusif et non cessible.</p>
 
     <h2>9. Limitation de responsabilité</h2>
+    <h2>7. Responsabilité liée aux contenus générés par l'IA</h2>
+    <p>Esmy met à disposition une fonctionnalité de génération automatique de réponses aux avis via intelligence artificielle. À ce titre :</p>
+    <ul>
+      <li><strong>L'utilisateur reste seul responsable</strong> du contenu qu'il choisit de publier sur sa fiche Google Business Profile, qu'il soit rédigé manuellement ou généré par l'IA d'Esmy.</li>
+      <li>Aucune réponse générée par l'IA n'est publiée sans l'approbation explicite et préalable du commerçant. En cliquant sur "Publier", l'utilisateur valide et assume l'entière responsabilité du contenu publié.</li>
+      <li>L'utilisateur s'engage à relire et vérifier les réponses générées avant publication. Esmy ne peut être tenu responsable d'erreurs, d'inexactitudes ou de propos inappropriés contenus dans une réponse approuvée et publiée par l'utilisateur.</li>
+      <li>L'utilisateur garantit que les contenus publiés via Esmy ne violent aucune loi applicable, aucun droit de tiers, et respectent les règles de conduite de Google Business Profile.</li>
+    </ul>
+
+    <h2>8. Limitation de responsabilité</h2>
     <p>Esmy ne saurait être tenu responsable de :</p>
     <ul>
       <li>Toute perte de classement Google résultant de modifications de l'algorithme Google</li>
