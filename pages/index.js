@@ -383,7 +383,7 @@ const BODY = `
           </div>
           <div class="fr-card top">
             <div class="frc-stars">★★★★★</div>
-            <div class="frc-text">J'ai tourné la roue et gagné un dessert !</div>
+            <div class="frc-text">Le concept est super sympa, ça change des formulaires classiques !</div>
             <div class="frc-name">— Camille B.</div>
           </div>
           <div class="fr-card bot">
@@ -496,14 +496,14 @@ const BODY = `
       <div class="step-card fade-in">
         <div class="step-num">2</div>
         <div class="step-icon">🎡</div>
-        <div class="step-title">Il laisse son avis — et joue</div>
-        <div class="step-desc">Le client est invité à partager son expérience honnête sur Google — quelle que soit sa note. Il tourne ensuite la roue et découvre son lot surprise.</div>
+        <div class="step-title">Il joue — puis partage son expérience</div>
+        <div class="step-desc">Le client scanne, tourne la roue et découvre son lot. Esmy l'invite ensuite à partager son expérience sur Google, s'il le souhaite.</div>
       </div>
       <div class="step-card fade-in">
         <div class="step-num">3</div>
         <div class="step-icon">🤖</div>
-        <div class="step-title">L'IA répond automatiquement</div>
-        <div class="step-desc">Chaque avis reçoit une réponse personnalisée générée par IA — dans votre ton, vérifiée par vous, publiée sur Google en un clic.</div>
+        <div class="step-title">L'IA prépare vos réponses</div>
+        <div class="step-desc">Pour chaque avis reçu, l'IA rédige une réponse personnalisée dans votre ton. Vous la vérifiez, la modifiez si besoin, et publiez en un clic.</div>
       </div>
     </div>
   </div>
@@ -516,12 +516,11 @@ const BODY = `
       <div class="feature-text">
         <div class="feature-label">Gamification</div>
         <h3 class="feature-title">La roue qui transforme chaque visite en avis</h3>
-        <p class="feature-desc">Vos clients ne laissent pas d'avis parce qu'ils n'ont pas de raison suffisante. Esmy crée cette raison avec une mécanique ludique et une récompense immédiate. Résultat : jusqu'à +300% d'avis chez certains commerçants.</p>
+        <p class="feature-desc">Esmy transforme un moment administratif en une expérience mémorable. En récompensant la visite de vos clients, vous créez un lien fort qui les encourage naturellement à partager leur enthousiasme en ligne.</p>
         <ul class="feature-list">
           <li>Lots entièrement personnalisables (café, réduction, cadeau…)</li>
           <li>Probabilités configurables par lot, roue temps réel</li>
           <li>Code unique généré — présenté en caisse</li>
-          <li>100% conforme aux règles Google Business</li>
         </ul>
       </div>
       <div class="feature-visual">
