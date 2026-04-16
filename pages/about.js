@@ -68,7 +68,7 @@ const BODY = `<nav>
     <div class="nav-links">
       <a href="/#fonctionnement">Comment ça marche</a>
       <a href="/#tarifs">Tarifs</a>
-      <a href="/demo">Démo Google</a>
+      <a href="/demo">Démo API</a>
     </div>
     <a href="/#tarifs" class="btn-cta">Démarrer gratuitement</a>
   </div>
@@ -106,23 +106,23 @@ const BODY = `<nav>
     <div class="stat-row">
       <div class="stat-box">
         <div class="stat-icon">🎡</div>
-        <div class="stat-num-clean">+300%</div>
-        <div class="stat-lbl">d'avis collectés chez certains commerçants</div>
+        <div class="stat-num-clean">🚀</div>
+        <div class="stat-lbl">Gamification pour remercier vos clients après chaque visite</div>
       </div>
       <div class="stat-box">
         <div class="stat-icon">🤖</div>
-        <div class="stat-num-clean">94%</div>
-        <div class="stat-lbl">des avis reçoivent une réponse IA</div>
+        <div class="stat-num-clean">🧠</div>
+        <div class="stat-lbl">IA qui prépare vos réponses — vous validez avant publication</div>
       </div>
       <div class="stat-box">
         <div class="stat-icon">⭐</div>
-        <div class="stat-num-clean">4.7★</div>
-        <div class="stat-lbl">note Google moyenne après Esmy</div>
+        <div class="stat-num-clean">⚙️</div>
+        <div class="stat-lbl">Plateforme conforme RGPD et aux règles Google Business</div>
       </div>
       <div class="stat-box">
         <div class="stat-icon">⚡</div>
         <div class="stat-num-clean">10 min</div>
-        <div class="stat-lbl">pour configurer et déployer votre QR code</div>
+        <div class="stat-lbl">pour configurer et déployer votre QR code
       </div>
     </div>
   </div>
