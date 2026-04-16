@@ -291,7 +291,7 @@ const BODY = `
       <a href="#fonctionnalites">Fonctionnalités</a>
       <a href="#tarifs">Tarifs</a>
       <a href="/about">À propos</a>
-      <a href="/demo">API Google</a>
+      <a href="/demo">Démo API</a>
     </div>
     <div class="nav-cta">
       <a href="/login" class="login">Connexion</a>
@@ -336,6 +336,7 @@ const BODY = `
       <div class="hero-right">
         <div style="position:relative;">
           <div class="hero-card">
+            <div style="position:absolute;top:-10px;right:-10px;z-index:10;background:rgba(17,24,39,.95);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:4px 11px;font-size:10px;font-weight:600;letter-spacing:.04em;">EXEMPLE ILLUSTRATIF</div>
             <div class="hc-top">
               <div class="hc-brand">
                 <div class="hc-logo">🍕</div>
@@ -344,21 +345,21 @@ const BODY = `
                   <div class="hc-loc">📍 Nice Centre</div>
                 </div>
               </div>
-              <div class="hc-tag">+28 avis ce mois</div>
+              <div class="hc-tag">Fiche connectée</div>
             </div>
             <div class="near-badge">
               <div class="nb-icon">🔍</div>
               <div class="nb-text">
                 Votre fiche apparaît maintenant dans les recherches<br>
-                <strong>"pizza near me · Nice"</strong> — Position #1 dans votre zone
+                <strong>"pizza near me · Nice"</strong> — Mieux positionnée grâce à vos avis
               </div>
             </div>
             <div class="g-listing">
               <div class="gl-top">
                 <div class="gl-name">La Pizza du Soleil</div>
-                <div class="gl-pos">#1 Local Pack</div>
+                <div class="gl-pos">Fiche optimisée</div>
               </div>
-              <div><span class="gl-stars">★★★★★</span><span class="gl-count">4.9 (312 avis)</span></div>
+              <div><span class="gl-stars">★★★★★</span><span class="gl-count">4.7 (142 avis)</span></div>
               <div class="gl-tag">🍕 Restaurant · Ouvert · Pizza · Nice</div>
             </div>
             <div class="reviews-mini">
@@ -436,7 +437,7 @@ const BODY = `
         <div class="near-facts">
           <div class="near-fact"><div class="ico">📍</div><span>58% des recherches Google incluent "near me" ou <span style="color:var(--orange);font-style:italic;">"près de moi"</span> en 2025</span></div>
           <div class="near-fact"><div class="ico">⭐</div><span>Les 3 premières fiches Google captent 70% des appels et visites</span></div>
-          <div class="near-fact"><div class="ico">📈</div><span>Un commerce avec 4.5+ ★ et 50+ avis récents passe systématiquement en tête</span></div>
+          <div class="near-fact"><div class="ico">📈</div><span>Un commerce avec 4.5+ ★ et 50+ avis récents améliore significativement son classement</span></div>
           <div class="near-fact"><div class="ico">🤖</div><span>Répondre à vos avis améliore votre score de pertinence Google</span></div>
         </div>
       </div>
@@ -454,7 +455,7 @@ const BODY = `
                 <div class="lp-biz-name">La Pizza du Soleil</div>
                 <div class="lp-stars-row"><span class="lp-stars">★★★★★</span><span class="lp-reviews">4.9 (312)</span></div>
               </div>
-              <div class="lp-esmy">Esmy ✓</div>
+              
             </div>
             <div class="lp-row">
               <div class="lp-rank r2">2</div>
@@ -472,7 +473,7 @@ const BODY = `
             </div>
           </div>
         </div>
-        <p style="font-size:12px;color:rgba(255,255,255,.3);text-align:center;margin-top:12px;">Simulation Local Pack Google · Résultats types Esmy</p>
+        <p style="font-size:12px;color:rgba(255,255,255,.3);text-align:center;margin-top:12px;">Simulation à titre illustratif. Les résultats réels varient selon de nombreux facteurs Google.</p>
       </div>
     </div>
   </div>
@@ -556,11 +557,11 @@ const BODY = `
       <div class="feature-text">
         <div class="feature-label">Intelligence Artificielle</div>
         <h3 class="feature-title">Répondez à chaque avis sans y penser</h3>
-        <p class="feature-desc">Un avis sans réponse, c'est un signal négatif pour Google. Esmy génère automatiquement des réponses naturelles dans le ton de votre commerce — et améliore votre score de pertinence locale à chaque réponse publiée.</p>
+        <p class="feature-desc">Répondre à vos avis renforce la relation avec vos clients et la perception de votre commerce en ligne. Esmy prépare des réponses naturelles dans votre ton — vous les validez en un clic avant publication.</p>
         <ul class="feature-list">
           <li>Réponses personnalisées au contenu de chaque avis</li>
           <li>Ton configurable (chaleureux, pro, local…)</li>
-          <li>Alerte immédiate sur les avis négatifs</li>
+          <li>Tableau de bord unifié pour tous vos avis</li>
           <li>Vous validez en 1 clic avant publication</li>
         </ul>
       </div>
@@ -574,16 +575,16 @@ const BODY = `
               Merci infiniment Sophie ! Votre fidélité nous touche vraiment. On a hâte de vous revoir ! 🙏
             </div>
           </div>
-          <div class="review-item" style="border-left:3px solid #EF4444;">
-            <div class="rv-header"><div class="rv-author">Marc D.</div><div class="rv-stars" style="color:#EF4444;">★★☆☆☆</div></div>
+          <div class="review-item">
+            <div class="rv-header"><div class="rv-author">Marc D.</div><div class="rv-stars">★★★☆☆</div></div>
             <div class="rv-text">"Attente un peu longue pour une heure creuse."</div>
-            <div class="ai-reply" style="background:rgba(239,68,68,.05);border-color:rgba(239,68,68,.2);">
-              <div class="ai-header" style="color:#EF4444;"><span class="ai-tag" style="background:#EF4444;">⚠ URGENT</span> Réponse empathique</div>
+            <div class="ai-reply">
+              <div class="ai-header"><span class="ai-tag">IA</span> Réponse générée · En attente</div>
               Cher Marc, merci pour votre retour sincère. Nous prenons note pour améliorer notre service. N'hésitez pas à nous recontacter.
             </div>
           </div>
           <div style="text-align:center;margin-top:10px;">
-            <div style="font-size:12px;color:var(--textsub);">94% de taux de réponse · Délai &lt; 2h</div>
+            <div style="font-size:12px;color:var(--textsub);">Toutes vos réponses dans un seul tableau de bord</div>
           </div>
         </div>
       </div>
@@ -603,9 +604,9 @@ const BODY = `
       </div>
       <div class="feature-visual">
         <div class="fv-card">
-          <div class="dash-stat"><div class="ds-icon o">⭐</div><div><div class="ds-lbl">Note Google</div><div class="ds-val">4.9 <span class="ds-trend">↑ +0.8 ce mois</span></div></div></div>
-          <div class="dash-stat"><div class="ds-icon g">📈</div><div><div class="ds-lbl">Position Local Pack</div><div class="ds-val">#1 <span class="ds-trend">↑ était #4</span></div></div></div>
-          <div class="dash-stat"><div class="ds-icon s">💬</div><div><div class="ds-lbl">Avis ce mois</div><div class="ds-val">47 <span class="ds-trend">↑ +320%</span></div></div></div>
+          <div class="dash-stat"><div class="ds-icon o">⭐</div><div><div class="ds-lbl">Note Google</div><div class="ds-val">4.7 <span class="ds-trend">↑ en progression</span></div></div></div>
+          <div class="dash-stat"><div class="ds-icon g">📈</div><div><div class="ds-lbl">Position Local Pack</div><div class="ds-val">En hausse <span class="ds-trend">↑ ces 30 jours</span></div></div></div>
+          <div class="dash-stat"><div class="ds-icon s">💬</div><div><div class="ds-lbl">Avis ce mois</div><div class="ds-val">47 <span class="ds-trend">↑ ce mois</span></div></div></div>
         </div>
       </div>
     </div>
@@ -616,45 +617,24 @@ const BODY = `
 <section class="testimonials" id="temoignages">
   <div class="container">
     <div class="text-center fade-in">
-      <div class="section-badge" style="background:rgba(249,115,22,.15);color:var(--orange);">❤️ Ils nous font confiance</div>
-      <h2 class="section-title">Des commerçants qui ont retrouvé leur visibilité</h2>
-      <p class="section-sub">Restaurants, boulangeries, instituts de beauté — partout en France, Esmy transforme leur réputation locale.</p>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card fade-in">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"En 3 semaines, on est passé de 47 à 134 avis Google. Ma fiche remonte enfin dans les recherches 'boulangerie près de moi'. La roue de la fortune, mes clients adorent ça."</p>
-        <div class="testi-author">
-          <div class="testi-av ta-a">M</div>
-          <div><div class="testi-name">Marie-Claire B.</div><div class="testi-role">Boulangerie Artisanale · Aix-en-Provence</div></div>
+      <div class="section-badge" style="background:rgba(249,115,22,.15);color:var(--orange);">🚀 En lancement</div>
+      <h2 class="section-title">Rejoignez les premiers utilisateurs d'Esmy</h2>
+      <p class="section-sub" style="margin-bottom:32px;">Esmy est en phase de lancement. 33 commerçants nous ont déjà rejoints pour tester la plateforme — bénéficiez des 14 jours gratuits et d'un accompagnement personnalisé.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px;max-width:880px;margin-left:auto;margin-right:auto;">
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:var(--rlg);padding:28px;text-align:center;">
+          <div style="font-size:36px;margin-bottom:12px;">🎡</div>
+          <div style="color:white;font-weight:700;font-size:15px;margin-bottom:6px;">Gamification</div>
+          <div style="color:rgba(255,255,255,.55);font-size:13px;line-height:1.6;">La roue de fortune qui remercie vos clients — avec ou sans avis.</div>
         </div>
-        <div class="g-validated">
-          <svg width="12" height="12" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="rgba(255,255,255,.2)"/><text x="3.5" y="10.5" font-size="8" fill="white" font-weight="700">G</text></svg>
-          Avis validé Google Business
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:var(--rlg);padding:28px;text-align:center;">
+          <div style="font-size:36px;margin-bottom:12px;">🤖</div>
+          <div style="color:white;font-weight:700;font-size:15px;margin-bottom:6px;">IA de réponse</div>
+          <div style="color:rgba(255,255,255,.55);font-size:13px;line-height:1.6;">Des réponses préparées dans votre ton, à valider en un clic.</div>
         </div>
-      </div>
-      <div class="testi-card fade-in">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Ce qui m'a convaincu c'est la réponse automatique. Je n'avais jamais le temps de répondre. Maintenant tous mes avis ont une réponse pro. Google a adoré — ma note est passée de 4.0 à 4.8."</p>
-        <div class="testi-author">
-          <div class="testi-av ta-b">J</div>
-          <div><div class="testi-name">Julien F.</div><div class="testi-role">Restaurant Méditerranéen · Marseille</div></div>
-        </div>
-        <div class="g-validated">
-          <svg width="12" height="12" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="rgba(255,255,255,.2)"/><text x="3.5" y="10.5" font-size="8" fill="white" font-weight="700">G</text></svg>
-          Avis validé Google Business
-        </div>
-      </div>
-      <div class="testi-card fade-in">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Ma note est passée de 3.9 à 4.7 en deux mois. Esmy m'a sauvé la mise — j'apparais maintenant dans les 3 premiers résultats quand quelqu'un cherche 'institut beauté Luberon'."</p>
-        <div class="testi-author">
-          <div class="testi-av ta-c">S</div>
-          <div><div class="testi-name">Sophie A.</div><div class="testi-role">Institut de Beauté · Luberon</div></div>
-        </div>
-        <div class="g-validated">
-          <svg width="12" height="12" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="rgba(255,255,255,.2)"/><text x="3.5" y="10.5" font-size="8" fill="white" font-weight="700">G</text></svg>
-          Avis validé Google Business
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:var(--rlg);padding:28px;text-align:center;">
+          <div style="font-size:36px;margin-bottom:12px;">📊</div>
+          <div style="color:white;font-weight:700;font-size:15px;margin-bottom:6px;">Dashboard clair</div>
+          <div style="color:rgba(255,255,255,.55);font-size:13px;line-height:1.6;">Tous vos avis Google dans un seul espace, simple à piloter.</div>
         </div>
       </div>
     </div>
