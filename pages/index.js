@@ -309,8 +309,7 @@ const BODY = `
           Recherches "near me" · +58% en 2025
         </div>
         <h1 class="hero-h1">
-          Soyez #1 quand<br>vos clients cherchent<br>
-          <span style="color:var(--orange);font-style:italic;">"près de moi"</span>
+          Améliorez votre<br>présence locale<br><span style="color:var(--orange);font-style:italic;">massivement.</span>
         </h1>
         <p class="hero-sub">Esmy collecte automatiquement vos avis Google grâce à la gamification, répond à chaque avis avec l'IA, et vous fait remonter dans le pack local Google — en moins d'une semaine.</p>
         <div class="hero-actions">
@@ -515,7 +514,7 @@ const BODY = `
     <div class="feature-block fade-in">
       <div class="feature-text">
         <div class="feature-label">Gamification</div>
-        <h3 class="feature-title">La roue qui transforme chaque visite en avis</h3>
+        <h3 class="feature-title">La roue qui transforme chaque visite en fidélisation</h3>
         <p class="feature-desc">Esmy transforme un moment administratif en une expérience mémorable. En récompensant la visite de vos clients, vous créez un lien fort qui les encourage naturellement à partager leur enthousiasme en ligne.</p>
         <ul class="feature-list">
           <li>Lots entièrement personnalisables (café, réduction, cadeau…)</li>
