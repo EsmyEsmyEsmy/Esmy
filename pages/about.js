@@ -138,7 +138,7 @@ const BODY = `<nav>
       <div class="value-card">
         <div class="value-icon">🏆</div>
         <div class="value-title">Honnêteté d'abord</div>
-        <div class="value-desc">Nous incitions les clients à laisser un avis honnête — pas un avis positif. La récompense est offerte quelle que soit la note. C'est conforme Google, et c'est éthique.</div>
+        <div class="value-desc">La récompense est offerte pour la visite — sans condition sur la note ou sur le fait de laisser un avis. Si un client choisit de partager son expérience, c'est librement et sincèrement. C'est éthique, et c'est comme ça que ça devrait fonctionner.</div>
       </div>
       <div class="value-card">
         <div class="value-icon">🎯</div>
