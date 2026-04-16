@@ -377,7 +377,32 @@ function showConfirmed() {
 }
 
 function claimPrize() {
-  // Save contact data here if needed, then offer optional Google review
+  // RGPD — explicit consent required before collecting personal data for marketing
+  const consentBox = document.getElementById('f-consent');
+  const nameField = document.getElementById('f-name');
+  const phoneField = document.getElementById('f-phone');
+  const name = nameField ? nameField.value.trim() : '';
+  const phone = phoneField ? phoneField.value.trim() : '';
+  
+  // If any personal data was entered, consent MUST be checked
+  if ((name || phone) && consentBox && !consentBox.checked) {
+    // Highlight the consent checkbox
+    const label = consentBox.parentElement;
+    if (label) {
+      label.style.background = 'rgba(239,68,68,.08)';
+      label.style.border = '1px solid rgba(239,68,68,.3)';
+      label.style.borderRadius = '8px';
+      label.style.padding = '10px 12px';
+      setTimeout(() => {
+        label.style.background = '';
+        label.style.border = '';
+        label.style.padding = '';
+      }, 3000);
+    }
+    alert('Merci de cocher la case de consentement pour continuer, ou choisissez "Non merci, juste le code" si vous ne souhaitez pas être contacté(e).');
+    return;
+  }
+  
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('on'));
   document.getElementById('s-review').classList.add('on');
 }
