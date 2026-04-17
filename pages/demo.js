@@ -75,7 +75,7 @@ const BODY = `<nav>
   <div class="container">
     <div class="eyebrow" data-fr="API Google Business Profile — Documentation" data-en="Google Business Profile API — Documentation">API Google Business Profile — Documentation</div>
     <h1 data-fr="Comment Esmy s'intègre avec<br>Google Business Profile" data-en="How Esmy integrates with<br>Google Business Profile">Comment Esmy s'intègre avec<br>Google Business Profile</h1>
-    <p data-fr="Esmy a soumis une demande d'accès formelle à l'API Google Business Profile. Cette page documente de manière transparente la façon dont nous intégrons votre fiche Google — en toute sécurité et conformément aux politiques de Google." data-en="Esmy has submitted a formal access request to the Google Business Profile API. This page transparently documents how we intend to integrate with your Google listing — securely and in full compliance with Google's policies.">Esmy a soumis une demande d'accès formelle à l'API Google Business Profile.</p>
+    <p data-fr="Esmy prépare sa demande d'accès à l'API Google Business Profile. Cette page documente de manière transparente comment nous prévoyons d'intégrer votre fiche Google — en toute sécurité et dans le respect des politiques Google." data-en="Esmy is preparing its access request to the Google Business Profile API. This page transparently documents how we plan to integrate with your Google listing — securely and in compliance with Google's policies.">Esmy prépare sa demande d'accès à l'API Google Business Profile.</p>
     <div class="compliance-row">
       <span class="cp-tag" data-fr="Demande d'accès soumise" data-en="API Access Request Submitted">Demande d'accès soumise</span>
       <span class="cp-tag">✓ OAuth 2.0</span>
@@ -142,11 +142,11 @@ const BODY = `<nav>
       <div class="step-left"><div class="step-ico">✅</div><div class="step-num-big">4</div><div class="step-label" data-fr="Publication" data-en="Reply Publishing">Publication</div></div>
       <div class="step-right">
         <div class="step-title" data-fr="Vous publiez — en un clic" data-en="You publish — one click">Vous publiez — en un clic</div>
-        <div class="step-desc" data-fr="Quand vous cliquez « Publier », Esmy appelle l'API pour poster votre réponse sur Google. L'auto-publication est disponible mais toujours opt-in, jamais par défaut." data-en="When you click 'Publish', Esmy calls the API to post your response on Google. Auto-publish is available but always opt-in, never the default.">Quand vous cliquez « Publier », Esmy appelle l'API pour poster votre réponse.</div>
+        <div class="step-desc" data-fr="Quand vous cliquez « Publier », Esmy appelle l'API pour poster votre réponse sur Google. Rien n'est jamais publié sans votre action explicite." data-en="When you click 'Publish', Esmy calls the API to post your response on Google. Nothing is ever published without your explicit action.">Quand vous cliquez « Publier », Esmy appelle l'API pour poster votre réponse.</div>
         <div class="step-details">
           <div class="step-detail" data-fr="Réponse publiée uniquement après votre approbation explicite" data-en="Reply only published after your explicit approval">Réponse publiée uniquement après votre approbation explicite</div>
           <div class="step-detail" data-fr="Via l'API Google officielle — pas de bots" data-en="Via official Google API — not bots">Via l'API Google officielle — pas de bots</div>
-          <div class="step-detail" data-fr="Apparaît sur Google sous votre nom en quelques secondes" data-en="Appears on Google under your name within seconds">Apparaît sur Google sous votre nom en quelques secondes</div>
+          <div class="step-detail" data-fr="Publiée sur Google via l'API officielle après validation" data-en="Published on Google via official API after your validation">Publiée sur Google via l'API officielle après validation</div>
           <div class="step-detail" data-fr="Journal d'audit complet de chaque réponse publiée" data-en="Full audit log of every reply published">Journal d'audit complet de chaque réponse publiée</div>
         </div>
         <div class="endpoint-tag">→ reviews.updateReply (WRITE — only after approval)</div>
@@ -156,11 +156,11 @@ const BODY = `<nav>
     <div class="step-block">
       <div class="step-left"><div class="step-ico">📊</div><div class="step-num-big">5</div><div class="step-label" data-fr="Analytics" data-en="Analytics & Ranking">Analytics</div></div>
       <div class="step-right">
-        <div class="step-title" data-fr="Suivez votre progression sur Google" data-en="Track your Google ranking progression">Suivez votre progression sur Google</div>
-        <div class="step-desc" data-fr="Votre tableau de bord affiche l'évolution de vos avis, votre note moyenne, votre taux de réponse et votre position estimée dans le Local Pack Google." data-en="Your dashboard shows your review count evolution, average rating, response rate, and estimated Local Pack position over time.">Votre tableau de bord affiche l'évolution de vos avis et votre classement Google.</div>
+        <div class="step-title" data-fr="Suivez l'activité de votre fiche" data-en="Track your listing activity">Suivez l'activité de votre fiche</div>
+        <div class="step-desc" data-fr="Votre tableau de bord affiche l'évolution de vos avis, votre note moyenne, et votre taux de réponse. Un outil de pilotage pour comprendre l'activité de votre fiche." data-en="Your dashboard shows your review count evolution, average rating, and response rate. A tool to help you understand your listing activity.">Votre tableau de bord affiche l'évolution de vos avis et de votre note.</div>
         <div class="step-details">
           <div class="step-detail" data-fr="Graphiques d'évolution hebdomadaire" data-en="Weekly evolution charts">Graphiques d'évolution hebdomadaire</div>
-          <div class="step-detail" data-fr="Taux de réponse suivi — signal clé pour Google" data-en="Response rate tracked — key Google ranking signal">Taux de réponse suivi — signal clé pour Google</div>
+          <div class="step-detail" data-fr="Taux de réponse suivi dans votre tableau de bord" data-en="Response rate tracked in your dashboard">Taux de réponse suivi dans votre tableau de bord</div>
           <div class="step-detail" data-fr="Vue multi-établissements" data-en="Multi-location view">Vue multi-établissements</div>
           <div class="step-detail" data-fr="Déconnectez à tout moment — vos avis vous appartiennent" data-en="Disconnect anytime — your reviews are always yours">Déconnectez à tout moment — vos avis vous appartiennent</div>
         </div>
