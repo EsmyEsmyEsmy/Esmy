@@ -526,7 +526,7 @@ canvas#wheel-config { border-radius: 50%; box-shadow: 0 4px 24px rgba(0,0,0,0.08
     <div class="topbar" style="position:relative">
       <div class="topbar-left">
         <div class="page-title" id="page-title">Vue d'ensemble</div>
-        <div class="tag tag-green"><span class="dot"></span> Actif</div>
+        <div class="tag" style="background:rgba(245,158,11,.12);color:#c2410c;border:1px solid rgba(245,158,11,.3);letter-spacing:.04em;font-weight:600;display:inline-flex;align-items:center;gap:6px;"><span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;"></span>🧪 DÉMO</div>
       </div>
       <div class="topbar-right">
         <div class="filter-label" id="filter-label"><strong>DONNÉES DE DÉMONSTRATION</strong> · Ce mois</div>
@@ -559,6 +559,13 @@ canvas#wheel-config { border-radius: 50%; box-shadow: 0 4px 24px rgba(0,0,0,0.08
 
       <!-- ── OVERVIEW ── -->
       <div class="panel active" id="panel-overview">
+        <div style="background:linear-gradient(90deg,rgba(249,115,22,.1) 0%,rgba(245,158,11,.1) 100%);border:1px dashed rgba(249,115,22,.4);border-radius:10px;padding:14px 18px;margin-bottom:20px;display:flex;align-items:center;gap:12px;">
+          <div style="font-size:20px;">🧪</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:#c2410c;letter-spacing:.04em;margin-bottom:2px;">DONNÉES DE DÉMONSTRATION</div>
+            <div style="font-size:12px;color:var(--t2);line-height:1.5;">Les avis, chiffres, et statistiques affichés ci-dessous sont <strong>fictifs</strong> et servent uniquement à illustrer l'interface Esmy. Aucun commerce réel n'est représenté.</div>
+          </div>
+        </div>
         <div class="stats-row">
           <div class="stat-card">
             <div class="stat-label">Note Google</div>
@@ -650,7 +657,7 @@ canvas#wheel-config { border-radius: 50%; box-shadow: 0 4px 24px rgba(0,0,0,0.08
                   </div>
                   <div class="rv-text">Pizza décevante, pâte pas cuite. Pas à la hauteur.</div>
                 </div>
-                <span class="tag tag-red">⚠ Urgent</span>
+                <span class="tag" style="background:var(--s3);color:var(--t2);">À examiner</span>
               </div>
             </div>
           </div>
@@ -789,7 +796,7 @@ canvas#wheel-config { border-radius: 50%; box-shadow: 0 4px 24px rgba(0,0,0,0.08
                 </div>
               </div>
               <div class="rv-actions">
-                <span class="tag tag-red">⚠ Urgent</span>
+                <span class="tag" style="background:var(--s3);color:var(--t2);">À examiner</span>
                 <button class="btn btn-primary btn-sm" onclick="notif('✅ Réponse approuvée — publication en cours')">Publier</button>
                 <button class="btn btn-ghost btn-sm" onclick="notif('🔄 Nouvelle version générée')">Régénérer</button>
               </div>
