@@ -104,6 +104,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,246,
 .pillar-tag{font-size:13px;color:var(--orange);font-weight:600;margin-bottom:16px;letter-spacing:.04em}
 .pillar-desc{font-size:14.5px;color:var(--textsub);line-height:1.65}
 
+
+/* ───────── METIERS SECTION ───────── */
+.metiers-section{padding:100px 0;border-top:1px solid rgba(15,23,42,.06);background:var(--cream2)}
+.metiers-head{text-align:center;margin-bottom:56px;max-width:620px;margin-left:auto;margin-right:auto}
+.metiers-eyebrow{font-size:11px;font-weight:600;color:var(--orange);letter-spacing:.22em;text-transform:uppercase;margin-bottom:16px}
+.metiers-title{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:700;letter-spacing:-.025em;line-height:1.2;color:var(--slate);margin-bottom:14px}
+.metiers-title em{font-style:italic;color:var(--orange)}
+.metiers-sub{font-size:15.5px;color:var(--textsub);line-height:1.65}
+.metiers-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:980px;margin:0 auto}
+.metier-card{background:white;border:1px solid rgba(15,23,42,.08);border-radius:var(--rlg);padding:28px 18px;text-align:center;text-decoration:none;color:var(--slate);transition:all .25s;display:flex;flex-direction:column;align-items:center;gap:10px}
+.metier-card:hover{border-color:var(--orange);transform:translateY(-3px);box-shadow:0 16px 40px rgba(15,23,42,.08)}
+.metier-card-emoji{font-size:32px;margin-bottom:2px}
+.metier-card-name{font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:700;letter-spacing:-.005em;line-height:1.3}
+.metier-card-arrow{font-size:12px;color:var(--g400);transition:color .2s,transform .2s}
+.metier-card:hover .metier-card-arrow{color:var(--orange);transform:translateX(3px)}
+@media(max-width:900px){
+  .metiers-section{padding:70px 0}
+  .metiers-grid{grid-template-columns:repeat(2,1fr);max-width:440px}
+}
+@media(max-width:480px){
+  .metiers-grid{grid-template-columns:1fr}
+}
+
 /* ───────── CTA FINAL ───────── */
 .cta-final{padding:120px 0;text-align:center;border-top:1px solid rgba(15,23,42,.06)}
 .cta-inner{max-width:640px;margin:0 auto}
@@ -217,6 +240,7 @@ const BODY = `
     <a href="/" class="logo">esmy<span class="logo-dot">.</span></a>
     <div class="nav-links">
       <a href="/about">À propos</a>
+      <a href="#metiers">Métiers</a>
       <a href="#tarifs">Tarifs</a>
       <a href="/demo">Démo API</a>
       <a href="#" onclick="openModal();return false">Contact</a>
@@ -374,6 +398,45 @@ const BODY = `
   </div>
 </section>
 
+
+<!-- METIERS -->
+<section class="metiers-section" id="metiers">
+  <div class="container">
+    <div class="metiers-head">
+      <div class="metiers-eyebrow">Pour votre métier</div>
+      <h2 class="metiers-title">Esmy s'adapte à <em>votre commerce.</em></h2>
+      <p class="metiers-sub">Chaque métier a sa réalité. Découvrez comment Esmy répond concrètement aux défis de votre activité.</p>
+    </div>
+    <div class="metiers-grid">
+      <a href="/boulangerie" class="metier-card">
+        <span class="metier-card-emoji">🥖</span>
+        <span class="metier-card-name">Boulangeries</span>
+        <span class="metier-card-arrow">→</span>
+      </a>
+      <a href="/restaurant" class="metier-card">
+        <span class="metier-card-emoji">🍽️</span>
+        <span class="metier-card-name">Restaurants</span>
+        <span class="metier-card-arrow">→</span>
+      </a>
+      <a href="/coiffeur" class="metier-card">
+        <span class="metier-card-emoji">💇</span>
+        <span class="metier-card-name">Coiffeurs</span>
+        <span class="metier-card-arrow">→</span>
+      </a>
+      <a href="/institut-beaute" class="metier-card">
+        <span class="metier-card-emoji">💆</span>
+        <span class="metier-card-name">Instituts</span>
+        <span class="metier-card-arrow">→</span>
+      </a>
+      <a href="/pizzeria" class="metier-card">
+        <span class="metier-card-emoji">🍕</span>
+        <span class="metier-card-name">Pizzerias</span>
+        <span class="metier-card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- CTA FINAL -->
 <section class="cta-final">
   <div class="container">
@@ -395,14 +458,15 @@ const BODY = `
     <div class="footer-col">
       <h4>Produit</h4>
       <a href="#tarifs">Tarifs</a>
-      <a href="#" onclick="openModal();return false">Planifier une démo</a>
       <a href="/demo">API Google</a>
       <a href="/login">Connexion</a>
     </div>
     <div class="footer-col">
-      <h4>Entreprise</h4>
-      <a href="/about">À propos</a>
-      <a href="#" onclick="openModal();return false">Contact</a>
+      <h4>Métiers</h4>
+      <a href="/boulangerie">Boulangeries</a>
+      <a href="/restaurant">Restaurants</a>
+      <a href="/coiffeur">Coiffeurs</a>
+      <a href="/institut-beaute">Instituts</a>
     </div>
     <div class="footer-col">
       <h4>Légal</h4>
