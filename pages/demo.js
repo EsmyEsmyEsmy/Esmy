@@ -77,7 +77,7 @@ const BODY = `<nav>
     <h1 data-fr="Comment Esmy s'intègre avec<br>Google Business Profile" data-en="How Esmy integrates with<br>Google Business Profile">Comment Esmy s'intègre avec<br>Google Business Profile</h1>
     <p data-fr="Esmy prépare sa demande d'accès à l'API Google Business Profile. Cette page documente de manière transparente comment nous prévoyons d'intégrer votre fiche Google — en toute sécurité et dans le respect des politiques Google." data-en="Esmy is preparing its access request to the Google Business Profile API. This page transparently documents how we plan to integrate with your Google listing — securely and in compliance with Google's policies.">Esmy prépare sa demande d'accès à l'API Google Business Profile.</p>
     <div class="compliance-row">
-      <span class="cp-tag" data-fr="Demande d'accès soumise" data-en="API Access Request Submitted">Demande d'accès soumise</span>
+      <span class="cp-tag" data-fr="Demande d'accès en préparation" data-en="API Access Request In Preparation">Demande d'accès en préparation</span>
       <span class="cp-tag">✓ OAuth 2.0</span>
       <span class="cp-tag" data-fr="✓ Conforme RGPD" data-en="✓ GDPR Compliant">✓ Conforme RGPD</span>
       <span class="cp-tag" data-fr="✓ Lecture seule sauf publication" data-en="✓ Read-only unless you publish">✓ Lecture seule sauf publication</span>
